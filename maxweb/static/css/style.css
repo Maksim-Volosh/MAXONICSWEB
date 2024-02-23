@@ -90,6 +90,37 @@ h6 {
     justify-content: center;
 }
 
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.obr {
+    display: flex;
+    gap: 40px;
+}
+
+.obr2 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.col-md-12 {
+    display: flex;
+    flex-direction: column;
+}
+
+.cntra {
+    display: flex;
+    align-self: center;
+}
+
+.cntr {
+    text-align: center;
+}
+
 @media (max-width: 1199.98px) {
     .nav-item {
         display: flex;
@@ -106,30 +137,38 @@ h6 {
     }
 }
 
-.row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media (max-width: 991.98px) {
+    .obr, .obr2 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0px 20px 0px 20px;
+    }
 }
 
-.obr {
-    display: flex;
+@media (max-width: 767.98px) {
+
+    .cid-u1TQRbANKu {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .cid-u1TQRbAKeC {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    .cid-u1TQRbAwa2 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
 }
 
-.col-md-12 {
-    display: flex;
-    flex-direction: column;
+@media (max-width: 500px) {
+    .obr, .obr2 {
+        padding: 0px 3px 0px 3px;
+    }
 }
-
-.cntra {
-    display: flex;
-    align-self: center;
-}
-
-.cntr {
-    padding: 0px 0px 0px 80px;
-}
-
 
 /* ========================REGISTER=============================== */
 
@@ -820,25 +859,28 @@ h6 {
 /* =======================================INFO======================================= */
 
 .info {
-    margin: 120px 0px 120px 0px;
+    margin: 120px 0px;
     background-color: #ffdf97;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 50px 0px 50px 0px;
+    padding: 50px 0px;
+    overflow-wrap: break-word; /* заменили word-wrap на overflow-wrap */
 }
 
 .info_block {
-    width: 1200px;
+    max-width: 1200px; /* изменено на max-width */
+    width: 100%; /* изменено на width: 100% */
+    padding: 0px 20px; /* добавили padding */
 }
-
 
 .content__title {
-    padding: 0px 0px 0px 0px;
+    padding: 0;
+    font-size: 32px; /* добавили размер шрифта */
 }
 
-.content__text{
+.content__text {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -846,20 +888,69 @@ h6 {
     font-size: 20px;
 }
 
-
-
 .text__text {
-    padding: 0px 0px 0px 10px;
+    padding-left: 10px; /* изменено на padding-left */
 }
 
 .info__button {
-    margin: 30px 0px 0px 0px;
-    align-self: flex-start; /* Выравнивание кнопки слева */
+    margin-top: 30px; /* изменено на margin-top */
+    align-self: flex-start;
 }
+
 .info-submit {
     padding: 15px;
-    border: #000 solid 3px;
+    border: 3px solid #000; /* изменено на 3px solid #000 */
     border-radius: 30px;
     color: #000;
+    text-decoration: none; /* добавили text-decoration */
+}
+
+@media (max-width: 1199.98px) {
+    .info_block {
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .info_block {
+        max-width: 700px;
+    }
+
+    .text__text {
+        font-size: 18px;
+    }
+
+    .content__title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .info_block {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 500px) {
+    .info_block {
+        max-width: 400px;
+    }
+
+    .content__text {
+        gap: 0px;
+    }
+
+    .content__title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .text__text {
+        font-size: 16px;
+    }
+
+    .content__text p{
+        font-size: 18px;
+    }
 }
 

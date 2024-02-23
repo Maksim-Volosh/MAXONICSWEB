@@ -53,11 +53,18 @@ def upload_files(f):
             
 @login_required
 def how_to_order(request):
-    return render(request, 'main/how_to_order.html')
+    if 'how_to_order_visited' in request.session:
+        return redirect('create_order')
+    else:
+        request.session['how_to_order_visited'] = True
+        return render(request, 'main/how_to_order.html')
+
     
 
 @login_required
 def create_order(request):
+    if 'how_to_order_visited' not in request.session:
+        return redirect('how_to_order')
     if request.method == 'POST':
         form = OrderForm(request.POST, request.FILES)
         if form.is_valid():
