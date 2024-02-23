@@ -1,0 +1,121 @@
+{% extends "main/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% block title %}Заказать{% endblock title %}
+
+{% block main %}
+<section class="order animate__animated animate__delay-1s animate__fadeInUp animate__fadeIn">
+    <div class="order__container order__container-bem">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+                <div class="order__title">Оформите Заказ:</div>
+
+                <div class="order__form">
+                    <div class="form__name">
+                        {{ form.name }}
+                        <div class="form__errors">
+                            {{ form.name.errors }}
+                        </div>
+                </div>
+
+
+                
+                <div class="form__desc">
+                    {{ form.description }}
+                    <div class="desc__tooltip">
+                        <img src="{% static "img/futtage/tooltip.png" %}" alt="Tooltip" style="height: 20px; width: 20px;">
+                        <div class="tooltip-text" style="display: none;">
+                            <p>Вы можете форматировать текст описания следующим образом:</p>
+                            <p>- Для <strong>жирного</strong> текста используйте <strong>**слово**</strong></p>
+                            <p>- Для <u>подчеркнутого</u> текста используйте <strong>__слово__</strong></p>
+                            <p>- Для <em>курсива</em> используйте <strong>&amp;слово&amp;</strong></p>
+                        </div>
+                    </div>
+                    <div class="form__errors">
+                        {{ form.description.errors }}
+                    </div>
+                </div>
+                
+                <div class="form__targetgroup">
+                    {{ form.targetgroup }}
+                    <div class="form__errors">
+                        {{ form.targetgroup.errors }}
+                    </div>
+                </div>
+
+                <div class="form__websitetype">
+                    {{ form.websitetype }}
+                    <div class="form__errors">
+                        {{ form.websitetype.errors }}
+                    </div>
+                </div>
+
+                <div class="form__deadline">
+                    {{ form.deadline }}
+                    <div class="form__errors">
+                        {{ form.deadline.errors }}
+                    </div>
+                </div>
+
+                <div class="form__budget">
+                    {{ form.budget }}
+                    <div class="form__errors">
+                        {{ form.budget.errors }}
+                    </div>
+                </div>
+
+                <div class="order__input-file">
+                    <label class="input-file">
+                        {% for file in form.files %}
+                            {{ file }}
+                        {% endfor %}  
+                        <span>Выберите файл</span>
+                    </label>
+                    <div class="desc__tooltip">
+                        <img src="{% static "img/futtage/tooltip.png" %}" alt="Tooltip" style="height: 20px; width: 20px;">
+                        <div class="tooltip-text" style="display: none;">
+                            <p>Вы можете добавить сюда архив с файлами для проекта</p>
+                            <p>Например:</p>
+                            <p>Фотографии дизайна, макеты, pdf-файлы и др.</p>
+                        </div>
+                    </div>
+                    <div class="form__errors">
+                        {{ form.files.errors }}
+                    </div>
+                </div>
+                
+
+                <div class="form__errors">
+                    {{ form.non_field_errors }}
+                </div>
+            </div>
+            <div class="order__button">
+                <div class="button-submit-order">
+                    <button type="submit">Заказать</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('.desc__tooltip').mouseover(function() {
+            $(this).find('.tooltip-text').show();
+        }).mouseout(function() {
+            $(this).find('.tooltip-text').hide();
+        });
+    });
+
+    
+</script>
+
+
+{% endblock main %}
+</html>

@@ -1,0 +1,43 @@
+{% extends "main/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% block title %}Войти{% endblock title %}
+
+{% block main %}
+<section class="register animate__animated animate__delay-1s animate__fadeInUp animate__fadeIn">
+    <div class="register__container register__container-bem">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="register__form">
+
+                <div class="login__title">Авторизация:</div>
+
+                <div class="form__input">
+                    {{ form.username }}
+                </div>
+                <div class="form__errors">
+                    {{ form.username.errors }}
+                </div>
+
+                <div class="form__input">
+                    {{ form.password }}
+                </div>
+                <div class="form__errors">
+                    {{form.non_field_errors}}
+                </div>
+            </div>
+            <div class="register__button">
+                <div class="button-submit">
+                    <button type="submit">Войти</button>
+                </div>
+            </div>
+            <div class="register__login">
+                <a href="{% url "register" %}"><p class="login-p">Еще нет аккаунта?</p></a>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock main %}
+</html>

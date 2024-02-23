@@ -1,0 +1,109 @@
+{% extends "main/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% block title %}Профиль{% endblock title %}
+
+{% block main %}
+
+
+<section class="profile">
+    <div class="profile__container">
+        {% if user.is_staff %}
+            <div class="profile__title"><a href="{% url 'admin:index' %}">Админ панель</a><br><br></div>
+
+        {% endif %}
+
+
+        <div class="profile__title">Ваш профиль:</div>
+        <div class="profile__info">
+            <div class="profile__username">
+                <div class="username__cap">Имя пользователя: </div>
+                <div class="username__username">{{ user.username|capfirst }}</div>
+            </div>
+            <div class="profile__email">
+                <div class="email__cap">Адрес электронной почты: </div>
+                <div class="email__email">{{ user.email|capfirst }}</div>
+            </div>
+            <div class="profile__name">
+                <div class="name__cap">Имя: </div>
+                <div class="name__name">{{ user.first_name|capfirst }}</div>
+            </div>
+            <div class="profile__lastname">
+                <div class="lastname__cap">Фамилия: </div>
+                <div class="lastname__lastname">{{ user.last_name|capfirst }}</div>
+            </div>
+        </div>
+
+
+        <div class="orders__title">Заказы:</div>
+        <div class="profile__orders">
+            {% if orders %}
+                {% for order in orders %}
+                    <div class="orders__box">
+                        <div class="orders__order">
+                            <div class="order__name">
+                                <div class="name__cap">Заказ:</div>
+                                <div class="name__name">{{ order.name }}</div>
+                            </div>
+                            <div class="order__description">
+                                <div class="description__cap">Описание:</div>
+                                <div class="description__description">{{ order.description|safe|linebreaks }}</div>
+                            </div>
+                            <div class="order__targetgroup">
+                                <div class="targetgroup__cap">Целевая аудитория:</div>
+                                <div class="targetgroup__targetgroup">{{ order.targetgroup }}</div>
+                            </div>
+                            <div class="order__websitetype">
+                                <div class="websitetype__cap">Тип сайта:</div>
+                                <div class="websitetype__websitetype">{{ order.get_websitetype_display }}</div>
+                            </div>
+                            <div class="order__budget">
+                                <div class="budget__cap">Бюджет:</div>
+                                <div class="budget__budget">{{ order.budget }} <p> €</p></div>
+                            </div>
+                            <div class="order__deadline">
+                                <div class="deadline__cap">Желаемый срок:</div>
+                                <div class="deadline__deadline">{{ order.get_deadline_display }}</div>
+                            </div>
+                            <div class="order__status">
+                                <div class="status__cap">Статус:</div>
+                                <div class="status__status">{{ order.get_status_display }}</div>
+                            </div>
+                            <div class="order__files">
+                                <div class="files__cap">Файлы:</div>
+                                {% if order.files %}
+                                    <div class="files__files"><a href="{{ order.files.url }}" download>{{ order.files.name }}</a></div>
+                                {% else %}
+                                    <div class="files__files">Файлы не предоставлены...</div>
+                                {% endif %}
+                            </div>
+                            {% if user.is_staff %}
+                            <div class="order__delete-button">
+                                <form method="post" action="{% url 'delete_order' order.id %}">
+                                    {% csrf_token %}
+                                    <button class="delete-button" type="submit">Удалить заказ</button>
+                                </form>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+            <div class="orders__box">
+                <div class="orders__no-order">
+                    <div class="no-order__title">У вас нету заказов 😢 ...</div>
+                    <div class="no-order__button">
+                        <div class="mbr-section-btn" >
+                            <a class="button-order" href="{% url "how_to_order" %}">Заказать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock main %}
+</html>
