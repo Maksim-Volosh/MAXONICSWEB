@@ -142,5 +142,5 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'maxonicsweb@gmail.com'
-EMAIL_HOST_PASSWORD = 'xckvpyumjxfdymuk'
+EMAIL_HOST_USER = 'example@gmail.com'
+EMAIL_HOST_PASSWORD = 'your pass'
