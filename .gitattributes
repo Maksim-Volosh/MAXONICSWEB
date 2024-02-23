@@ -1,1 +1,13 @@
-* linguist-language=Python
+# .gitattributes
+
+# Python files
+*.py linguist-language=Python
+
+# HTML files
+*.html linguist-language=HTML
+
+# CSS files
+*.css linguist-language=CSS
+
+# JavaScript files
+*.js linguist-language=JavaScript
