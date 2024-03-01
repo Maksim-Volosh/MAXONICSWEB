@@ -3,9 +3,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 {% block title %}MAXONICSWEB{% endblock title %}
 
 {% block main %}
+
 
   <style>
       .cid-u1TQRbzxNu {
@@ -64,12 +66,12 @@
       }
       .bg-img {
         background-image: url('{% static "img/futtage/fut.png" %}');
-        background-size: cover; 
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
   </style>
-      
+
   <section class="header18 cid-u1TQRbzxNu mbr-fullscreen bg-img">
         <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
         <div class="container-fluid">
@@ -83,16 +85,20 @@
                 <p class="mbr-fonts-style mbr-text mbr-white display-7 animate__animated animate__delay-1s animate__fadeInUp">Добро пожаловать на MAXONICSWEB - ваш надежный партнер в создании превосходных веб-сайтов!</p>
 
                 <p class="mbr-fonts-style mbr-text mbr-white display-7 animate__animated animate__delay-1s animate__fadeInUp">Мы - команда профессионалов, готовых воплотить ваши идеи в жизнь с акцентом на качество, инновации и уникальность.</p>
-                
+
                 <p class="mbr-fonts-style mbr-text mbr-white display-7 animate__animated animate__delay-1s animate__fadeInUp"> Доверьте нам свой проект, и мы обеспечим вам высококачественное решение, соответствующее вашим потребностям и ожиданиям.</p></p>
-              <div class="mbr-section-btn" id="seeother">
-                <a class="btn btn-white-outline display-7 animate__animated animate__delay-1s animate__fadeInUp" href="{% url "home" %}#seeother">Узнать больше</a>
+              <div class="buttons-seeother">
+                <div class="mbr-section-btn" id="seeother">
+                  <a class="btn btn-white-outline display-7 animate__animated animate__delay-1s animate__fadeInUp" href="{% url "home" %}#seeother">Узнать больше</a>
+                </div>
+                <div class="mbr-section-btn">
+                  <a class="btn btn-white-outline display-7 animate__animated animate__delay-1s animate__fadeInUp" href="{% url "create_order" %}">Заказать</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
   </section>
-
   <style>
     .cid-u1TQRbANKu {
       padding-top: 5rem;
@@ -109,11 +115,11 @@
       background-image: {% static "img/futtage/fut.jpg" %}
     }
   </style>
-    
+
   <section class="article15 cid-u1TQRbANKu" id="about-me-15-u1TQRbANKu">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 col-md">                
+                <div class="col-12 col-md">
                     <h6 class="mbr-section-subtitle mbr-fonts-style mt-0 mb-4 display-5">
                         <strong>Привет! Я - ваш личный веб-разработчик Максим, готовый воплотить ваши самые смелые идеи в реальность.</strong>
                     </h6>
@@ -191,7 +197,7 @@
         color: #000000;
       }
   </style>
-      
+
   <section class="article05 cid-u1TQRbAKeC" id="generic-text-5-u1TQRbAKeC">
         <div class="container">
           <div class="row justify-content-center align-items-center">
@@ -279,7 +285,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 clmn">
-              <div class="cntra col-12 col-lg-6 col-md">                
+              <div class="cntra col-12 col-lg-6 col-md">
                 <h6 class="cntr mbr-section-subtitle mbr-fonts-style mt-0 mb-4 display-5">
                     <strong>Почему стоит выбрать меня для создания вашего веб-сайта?</strong>
                 </h6>
@@ -298,7 +304,7 @@
         </div>
     </div>
   </section>
-      
+
   <style>
     .cid-u1TQRbAwa2 {
       padding-top: 5rem;
@@ -322,18 +328,18 @@
     .cid-u1TQRbAwa2 .item-wrapper {
       background: #ffffff;
       margin-bottom: 2rem;
-      padding: 2.25rem;
+      padding: 20px 10px 20px 30px;
     }
     @media (min-width: 992px) and (max-width: 1200px) {
       .cid-u1TQRbAwa2 .item-wrapper {
-        padding: 2rem 1.5rem;
+        padding: 20px 10px 20px 30px;
         margin-bottom: 2rem;
       }
     }
     @media (max-width: 767px) {
       .cid-u1TQRbAwa2 .item-wrapper {
-        padding: 2rem 1.5rem;
-        margin-bottom: 1rem;
+        padding: 15px 5px 15px 25px;
+        margin-bottom: 2rem;
       }
     }
 
@@ -344,59 +350,86 @@
           <div class="col-12 mb-5 content-head">
               <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
                   <strong>Часто задаваемые вопросы</strong>
-              </h3>   
+              </h3>
           </div>
           <div class="row justify-content-center">
               <div class="col-12 col-lg-8">
-                  <div class="item features-without-image col-12 active">
-                      <div class="item-wrapper">
-                          <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-5">
-                              <strong>Каковы ваши цены?</strong></h5>
-                          <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7">
-                              Мои цены зависят от сложности проекта, но я могу предположить цену по колличеству работы и объему проекта.
-                          </p>
-                      </div>
+
+                <div class="item-wrapper">
+                  <button class="accordion">
+                    <h5 class="justify-space-beetwen mbr-card-title mbr-fonts-style mt-0 display-5">
+                      <strong class="strel">Каковы ваши цены?</strong>
+                      <img src="{% static "img/futtage/arrow.svg" %}" alt="arrowdown" style="width: 34px; height:34px;">
+                    </h5>
+                  </button>
+                  <div class="panel">
+                    <div class="acc-text">
+                      Мои цены зависят от сложности проекта, но я могу предположить цену по количеству работы и объему проекта.
+                    </div>
                   </div>
-                  <div class="item features-without-image col-12">
-                      <div class="item-wrapper">
-                          <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-5">
-                              <strong>Как долго занимает создание веб-сайта?</strong></h5>
-                          <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7">
-                              Время создания веб-сайта зависит от его сложности и функциональности. Я всегда стремлюсь к быстрому и качественному выполнению проекта.
-                          </p>
-                      </div>
+                </div>
+
+                <div class="item-wrapper">
+                  <button class="accordion">
+                    <h5 class="justify-space-beetwen mbr-card-title mbr-fonts-style mt-0 display-5">
+                      <strong class="strel">Как долго занимает создание веб-сайта?</strong>
+                      <img src="{% static "img/futtage/arrow.svg" %}" alt="arrowdown" style="width: 34px; height:34px;">
+                    </h5>
+                  </button>
+                  <div class="panel">
+                    <div class="acc-text">
+                      Время создания веб-сайта зависит от его сложности и функциональности. Я всегда стремлюсь к быстрому и качественному выполнению проекта.
+                    </div>
                   </div>
-                  <div class="item features-without-image col-12">
-                      <div class="item-wrapper">
-                          <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-5">
-                              <strong>Какой опыт у вас в веб-разработке?</strong></h5>
-                          <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7">
-                              У меня более 2.5 лет опыта в веб-разработке, в том числе создание уникальных дизайнов, оптимизацию производительности и разработку пользовательских интерфейсов.
-                          </p>
-                      </div>
+                </div>
+
+                <div class="item-wrapper">
+                  <button class="accordion">
+                    <h5 class="justify-space-beetwen mbr-card-title mbr-fonts-style mt-0 display-5">
+                      <strong class="strel">Какой опыт у вас в веб-разработке?</strong>
+                      <img src="{% static "img/futtage/arrow.svg" %}" alt="arrowdown" style="width: 34px; height:34px;">
+                    </h5>
+                  </button>
+                  <div class="panel">
+                    <div class="acc-text">
+                      У меня более 2.5 лет опыта в веб-разработке, в том числе создание уникальных дизайнов, оптимизацию производительности и разработку пользовательских интерфейсов.
+                    </div>
                   </div>
-                    <div class="item features-without-image col-12">
-                      <div class="item-wrapper">
-                          <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-5">
-                              <strong>Как связаться с вами?</strong></h5>
-                          <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7">
-                              Вы можете связаться со мной через блок - "Контакты" по электронной почте, по телефону или по рабочему телеграмм аккаунту.
-                          </p>
-                      </div>
+                </div>
+
+                <div class="item-wrapper">
+                  <button class="accordion">
+                    <h5 class="justify-space-beetwen mbr-card-title mbr-fonts-style mt-0 display-5">
+                      <strong class="strel">Как связаться с вами?</strong>
+                      <img src="{% static "img/futtage/arrow.svg" %}" alt="arrowdown" style="width: 34px; height:34px;">
+                    </h5>
+                  </button>
+                  <div class="panel">
+                    <div class="acc-text">
+                      Вы можете связаться со мной через блок - "Контакты" по электронной почте, по телефону или по рабочему телеграмм аккаунту.
+                    </div>
                   </div>
-                    <div class="item features-without-image col-12">
-                      <div class="item-wrapper">
-                          <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-5">
-                              <strong>Какие технологии вы используете?</strong></h5>
-                          <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7">
-                              Я работаю с передовыми технологиями, такими как HTML5, CSS3, JavaScript, Django, Bootstrap, Python, SQL.
-                          </p>
-                      </div>
+                </div>
+
+                <div class="item-wrapper">
+                  <button class="accordion">
+                    <h5 class="justify-space-beetwen mbr-card-title mbr-fonts-style mt-0 display-5">
+                      <strong class="strel">Какие технологии вы используете?</strong>
+                      <img src="{% static "img/futtage/arrow.svg" %}" alt="arrowdown" style="width: 34px; height:34px;">
+                    </h5>
+                  </button>
+                  <div class="panel">
+                    <div class="acc-text">
+                      Я работаю с передовыми технологиями, такими как HTML5, CSS3, JavaScript, Django, Bootstrap, Python, SQL.
+                    </div>
                   </div>
+                </div>
               </div>
           </div>
       </div>
   </section>
+
+
 
   <style>
     .cid-u1TQRbAQ2D {
@@ -495,7 +528,7 @@
             </div>
             <div class="item features-without-image col-12 col-lg-4">
                 <div class="item-wrapper">
-                    <div class="card-box"> 
+                    <div class="card-box">
                         <div class="img-box">
                             <div class="image-wrapper mb-3">
                                 <img src="{% static "assets/images/photo-1618761714954-0b8cd0026356.jpeg" %}">
@@ -638,7 +671,7 @@
                 <div class="mbr-section-btn">
                     <a class="btn btn-primary display-7" href="{% url "how_to_order" %}" id="contacts">
                         Заказать
-                    </a> 
+                    </a>
             </div>
         </div>
     </div>
@@ -709,7 +742,7 @@
       display: none;
     }
   </style>
-    
+
   <section class="contacts03 cid-u1TQRbEvjR" id="contacts-11-u1TQRbEvjR">
       <div class="container">
         <div class="row justify-content-center">
@@ -721,9 +754,10 @@
               <p class="mbr-section-subtitle mbr-fonts-style mt-0 mb-4 display-7">
                 Телефон: <a href="#">+37061167250</a>
                 <br>Telegram: <a href="https://t.me/maksim_veb">@maksim_veb</a>
+                <br>Facebook: <a href="https://www.facebook.com/profile.php?id=61550255357390">Максим Волош</a>
                 <br>Email: maksgoza16@gmail.com
                 <br>Адрес:  Lithuania
-                <br>Время в которое могу ответить: <br> Пн-Пт: <br> 9:00 - 18:00</p> 
+                <br>График работы: <br> Пн-Пт: <br> • 12:00 - 21:00  <br> Сб-Вс: <br> • 9:00 - 23:00</p>
             </div>
           </div>
           <div class="col-lg-8 side-features">
@@ -736,5 +770,23 @@
   </section>
 
   <script src="{% static "assets/smoothscroll/smooth-scroll.js" %}"></script>
+      <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+    </script>
+
 {% endblock main %}
+
 </html>

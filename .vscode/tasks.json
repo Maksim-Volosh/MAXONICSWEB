@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Django Server",
+            "type": "shell",
+            "command": "G:\\vscode\\MAXONICSWEB\\myenv\\Scripts\\python.exe",
+            "args": [
+                "${workspaceFolder}\\maxweb\\manage.py",
+                "runserver"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        }
+    ]
+}

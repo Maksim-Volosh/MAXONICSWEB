@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="icon" href="{% static "img/futtage/favi.ico" %}" type="image/x-icon">
-    <meta name="description" content="Веб-сайт о программисте, предоставляющем услуги по созданию веб-сайтов. Содержит информацию о его опыте, услугах, преимуществах, портфолио и контактной информации.">
-  
+    <meta name="description" content="MAXONICSWEB Веб-сайт о программисте, предоставляющем услуги по созданию веб-сайтов.">
+
     <title>{% block title %}{% endblock title %}</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="{% static "assets/dropdown/css/style.css" %}">
     <link rel="stylesheet" href="{% static "assets/socicon/css/styles.css" %}">
@@ -22,9 +22,10 @@
     <link rel="preload" as="style" href="{% static "assets/mobirise/css/additional.css" %}">
     <link rel="stylesheet" href="{% static "assets/mobirise/css/additional.css" type="text/css" %}">
     <link rel="stylesheet" href="{% static "css/style.css" %}">
-    
-    
-  
+    <link rel="stylesheet" href="{% static "css/accardion.css" %}">
+
+
+
     <style>:root{ --background: #FFF9EC; --dominant-color: #FFC43D; --primary-color: #EF476F; --secondary-color: #69CFA9; --success-color: #2BD888; --danger-color: #DA293A; --warning-color: #FFC004; --info-color: #11CCF2; --background-text: #000000; --dominant-text: #000000; --primary-text: #FFFFFF; --secondary-text: #000000; --success-text: #000000; --danger-text: #FFFFFF; --warning-text: #000000; --info-text: #000000;}</style>
 </head>
 
@@ -596,7 +597,7 @@
           }
           }
       </style>
-    
+
       <section class="menu menu2 cid-u1TQRbz2uR" once="menu" id="menu-5-u1TQRbz2uR">
               <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
                 <div class="container">
@@ -640,7 +641,7 @@
 
                       {% if user.is_authenticated %}
                           <li class="nav-item nav-item-mod">
-                            <a class="nav-link link display-4 profile-name" href="{% url 'profile' username=user.username %}"><h6 class="podch">{{ user.username|upper }}</h6></a>
+                            <a class="nav-link link display-4 profile-name" href="{% url 'profile' username=request.user %}"><h6 class="podch">{{ request.user|upper }}</h6></a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link link display-4" href="{% url "logout" %}">Выйти</a>
@@ -718,9 +719,9 @@
           .cid-u1TQRbEQmm .mbr-section-title {
             color: #ffffff;
           }
-          
+
       </style>
-          
+
       <section class="footer3 cid-u1TQRbEQmm" once="footers" id="footer-3-u1TQRbEQmm">
               <div class="container">
                   <div class="row">

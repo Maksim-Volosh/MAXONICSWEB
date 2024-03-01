@@ -1,0 +1,28 @@
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    cursor: pointer;
+    padding: 13px 7px 13px 0px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.panel {
+    
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    text-align: left;
+}
+
+.acc-text {
+    font-size: 24px;
+    padding: 5px 15px 15px 0px;
+    line-height: 1.5;
+}

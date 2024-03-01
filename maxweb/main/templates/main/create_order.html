@@ -1,7 +1,12 @@
 {% extends "main/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- jQuery (необходим для Bootstrap JavaScript плагинов) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 {% block title %}Заказать{% endblock title %}
 
@@ -24,14 +29,16 @@
 
                 
                 <div class="form__desc">
-                    {{ form.description }}
-                    <div class="desc__tooltip">
-                        <img src="{% static "img/futtage/tooltip.png" %}" alt="Tooltip" style="height: 20px; width: 20px;">
-                        <div class="tooltip-text" style="display: none;">
-                            <p>Вы можете форматировать текст описания следующим образом:</p>
-                            <p>- Для <strong>жирного</strong> текста используйте <strong>**слово**</strong></p>
-                            <p>- Для <u>подчеркнутого</u> текста используйте <strong>__слово__</strong></p>
-                            <p>- Для <em>курсива</em> используйте <strong>&amp;слово&amp;</strong></p>
+                    <div class="desk">
+                        {{ form.description }}
+                        <div class="desc__tooltip">
+                            <img src="{% static "img/futtage/tooltip.png" %}" alt="Tooltip" style="height: 20px; width: 20px;">
+                            <div class="tooltip-text" style="display: none;">
+                                <p>Вы можете форматировать текст описания следующим образом:</p>
+                                <p>- Для <strong>жирного</strong> текста используйте <strong>**слово**</strong></p>
+                                <p>- Для <u>подчеркнутого</u> текста используйте <strong>__слово__</strong></p>
+                                <p>- Для <em>курсива</em> используйте <strong>&amp;слово&amp;</strong></p>
+                            </div>
                         </div>
                     </div>
                     <div class="form__errors">
@@ -59,6 +66,20 @@
                         {{ form.deadline.errors }}
                     </div>
                 </div>
+                <div class="form__deadline">
+                    {{ form.socialnetworkchose }}
+                    <div class="form__errors">
+                        {{ form.socialnetworkchose.errors }}
+                    </div>
+                </div>
+                
+                <div class="order__form">
+                    <div class="form__name">
+                        {{ form.socialnetwork }}
+                        <div class="form__errors">
+                            {{ form.socialnetwork.errors }}
+                        </div>
+                </div>
 
                 <div class="form__budget">
                     {{ form.budget }}
@@ -72,12 +93,12 @@
                         {% for file in form.files %}
                             {{ file }}
                         {% endfor %}  
-                        <span>Выберите файл</span>
+                        <span>Выберите файл </span>
                     </label>
                     <div class="desc__tooltip">
                         <img src="{% static "img/futtage/tooltip.png" %}" alt="Tooltip" style="height: 20px; width: 20px;">
-                        <div class="tooltip-text" style="display: none;">
-                            <p>Вы можете добавить сюда архив с файлами для проекта</p>
+                        <div class="tooltip-text tooltip-text-file" style="display: none;">
+                            <p>Вы можете добавить сюда архив с файлами для проекта - максимум 50мб</p>
                             <p>Например:</p>
                             <p>Фотографии дизайна, макеты, pdf-файлы и др.</p>
                         </div>
@@ -96,11 +117,13 @@
                 <div class="button-submit-order">
                     <button type="submit">Заказать</button>
                 </div>
+
             </div>
+
+            
         </form>
     </div>
 </section>
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -112,10 +135,7 @@
             $(this).find('.tooltip-text').hide();
         });
     });
-
-    
 </script>
-
 
 {% endblock main %}
 </html>

@@ -34,8 +34,19 @@
                 <div class="lastname__cap">Фамилия: </div>
                 <div class="lastname__lastname">{{ user.last_name|capfirst }}</div>
             </div>
-        </div>
 
+        </div>
+            {% if success_message %}
+            <div class="opacity" id="myModal">
+                <div class="modal-form animate__animated animate__delay-1s animate__fadeInUp animate__fadeIn">
+                    <div class="modal-content">
+                        <div class="modal-title">🚀🎉ПОЗДРАВЛЯЕМ 🚀🎉</div>
+                        <div class="modal-text">Ваш заказ успешно создан, и будет обработан в скорейшее время, следите за статусом заказа</div>
+                    </div>
+                    <div class="modal-button"><button id="closeModalBtn">Понял</button></div>
+                </div>
+            </div>
+            {% endif %}
 
         <div class="orders__title">Заказы:</div>
         <div class="profile__orders">
@@ -67,19 +78,27 @@
                                 <div class="deadline__cap">Желаемый срок:</div>
                                 <div class="deadline__deadline">{{ order.get_deadline_display }}</div>
                             </div>
-                            <div class="order__status">
-                                <div class="status__cap">Статус:</div>
-                                <div class="status__status">{{ order.get_status_display }}</div>
+                            <div class="order__deadline">
+                                <div class="deadline__cap">Тип связи:</div>
+                                <div class="deadline__deadline">{{ order.get_socialnetworkchose_display }}: {{ order.socialnetwork }}</div>
                             </div>
                             <div class="order__files">
                                 <div class="files__cap">Файлы:</div>
                                 {% if order.files %}
-                                    <div class="files__files"><a href="{{ order.files.url }}" download>{{ order.files.name }}</a></div>
+                                <a href="{% url 'download_file' file_path=order.files.name %}" download>{{ order.files.name }}</a>
                                 {% else %}
                                     <div class="files__files">Файлы не предоставлены...</div>
                                 {% endif %}
                             </div>
+                            <div class="order__status">
+                                <div class="status__cap">Статус:</div>
+                                <div class="status__status">{{ order.get_status_display }}</div>
+                            </div>
                             {% if user.is_staff %}
+                            <div class="order__status">
+                                <div class="status__cap">Пользователь:</div>
+                                <div class="status__status">{{ order.user.username|capfirst }}</div>
+                            </div>
                             <div class="order__delete-button">
                                 <form method="post" action="{% url 'delete_order' order.id %}">
                                     {% csrf_token %}
@@ -105,5 +124,22 @@
         </div>
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Находим кнопку для закрытия модального окна
+        var closeModalBtn = document.getElementById('closeModalBtn');
+        
+        // Находим само модальное окно
+        var modal = document.getElementById('myModal');
+    
+        // Добавляем обработчик события клика на кнопку
+        closeModalBtn.addEventListener('click', function () {
+            // Добавляем класс для скрытия модального окна
+            modal.classList.add('hidden-modal');
+        });
+    });    
+</script>
+
 {% endblock main %}
 </html>

@@ -51,13 +51,15 @@ class OrderForm(forms.ModelForm):
     class Meta:
         model = OrderCreate
         exclude = ['status', 'user']
-        fields = ['name', 'description', "targetgroup", 'websitetype','budget', 'deadline', 'files']
+        fields = ['name', 'description', "targetgroup", 'websitetype', 'budget','socialnetworkchose' , 'socialnetwork', 'deadline', 'files']
         placeholders = {
             'name': 'Название заказа',
             'description': 'Описание вашего проекта, что хотите видеть, какие функции хотите реализовать',
             'targetgroup': 'Какая ваша целевая аудитория?',
             'websitetype': 'Выберите тип сайта',
             'budget': 'Бюджет (€)',
+            'socialnetworkchose': "Выберите тип связи",
+            'socialnetwork': "Контакт для связи ",
             'deadline': 'Желаемый срок',
             'files': 'Файлы',
         }

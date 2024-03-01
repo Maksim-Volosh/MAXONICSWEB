@@ -13,6 +13,7 @@ urlpatterns = [
     path('profile/<str:username>/', profile_view, name='profile'),
     path('how_to_order/', how_to_order, name='how_to_order'),
     path('create_order/', create_order, name='create_order'),
+    path('download/<path:file_path>/', download_file, name='download_file'),
     path('order/delete/<int:order_id>/', delete_order, name='delete_order'),
     path('portfolio/', portfolio, name='portfolio'),
 ]
