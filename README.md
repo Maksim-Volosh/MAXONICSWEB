@@ -30,7 +30,7 @@ This project is a web application that allows users to register, log in, create 
 - Improve the user interface to enhance usability.
 
 ## Authors
-- [Maxim](https://github.com/Maksim-Volosh /) - Project Manager and developer
+- [Maxim](https://github.com/Maksim-Volosh/) - Project Manager and developer
   
 ---
 
