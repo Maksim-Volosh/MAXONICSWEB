@@ -1,5 +1,37 @@
-﻿# MAXONICSWEB
+# MAXONICSWEB
 
+---
+
+## Introduction
+This project is a web application that allows users to register, log in, create orders and view their profiles. Users who are not registered or logged in cannot create orders or access their profiles. In addition, all orders are displayed in the administrative panel.
+
+## Features
+- **User Authentication**: Users can register an account and log in to access additional features.
+- **Create Orders**: Registered users can create orders with the necessary details.
+- **Profile Management**: Users can view their profiles, including a list of created orders.
+- **Administrative Panel**: Users with administrator rights have access to the administrative panel where all orders are displayed.
+- **Administrative Panel**: Users with administrator rights have access to the administrative panel where all orders are displayed.
+- **Order Notifications**: The owner receives email notifications about the creation of orders.
+
+## Technologies used
+- Django: A Python-based web framework for creating web applications.
+- HTML: A markup language for creating web pages.
+- CSS: A style language for designing the appearance of web pages.
+- JavaScript: A programming language for adding interactivity to web pages.
+
+## Usage
+1. Register an account if you are a new user, or log in if you are already registered.
+2. After logging in, you can create orders with the necessary details.
+3. View your profile to see the orders you have created.
+4. Users with administrator rights can access the administrative panel to view all orders.
+
+## Development plans
+- Add additional functions for user interaction and order management.
+- Improve the user interface to enhance usability.
+
+## Authors
+- [Maxim](https://github.com/Maksim-Volosh/) - Project Manager and developer
+  
 ---
 
 ## Введение
