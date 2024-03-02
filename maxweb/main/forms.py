@@ -3,24 +3,28 @@ from .models import *
 from django.contrib.auth.forms import UserCreationForm, User, AuthenticationForm
 from django.contrib.auth.validators import ASCIIUsernameValidator
 from .models import CustomUser
+from django.utils.translation import gettext_lazy as _
+from phonenumber_field.formfields import PhoneNumberField
+from phonenumber_field.widgets import PhoneNumberInternationalFallbackWidget
 
 class CustomUserCreationForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
         placeholders = kwargs.pop('placeholders', {
-            'username': 'Имя пользователя',
-            'first_name': 'Имя',
-            'last_name': 'Фамилия',
-            'email': 'Электронная почта',
-            'password1': 'Введите ваш пароль',
-            'password2': 'Введите ваш пароль еще раз',
+            'username': _('Username'),
+            'first_name': _('First name'),
+            'last_name': _('Last name'),
+            'email': _('Email'),
+            'password1': _('Enter your password'),
+            'password2': _('Enter your password again'),
         })
+
         super().__init__(*args, **kwargs)
         for field, placeholder in placeholders.items():
             self.fields[field].widget.attrs.update({'placeholder': placeholder})
         
         for field_name, field in self.fields.items():
             if isinstance(field, forms.CharField) and field_name.startswith('password'):
-                field.widget.attrs.update({'pattern': '[a-zA-Z0-9]+', 'title': 'Пароль должен содержать только латинские буквы и цифры'})
+                field.widget.attrs.update({'pattern': '[a-zA-Z0-9]+', 'title': _('Password must contain only Latin letters and digits')})
 
     class Meta:
         model = CustomUser
@@ -37,8 +41,8 @@ class CustomUserCreationForm(UserCreationForm):
 
     
 class LoginUserForm(AuthenticationForm):
-    username = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Имя пользователя', }))
-    password = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Введите пароль',}))
+    username = forms.CharField(widget=forms.TextInput(attrs={'placeholder': _('Username'), }))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': _('Password'),}))
     
     
     
@@ -48,20 +52,24 @@ class OrderForm(forms.ModelForm):
 
     budget = forms.DecimalField(label='Бюджет (€)')
     
+    socialnetwork = PhoneNumberField(
+        widget=PhoneNumberInternationalFallbackWidget()
+    )
+    
     class Meta:
         model = OrderCreate
         exclude = ['status', 'user']
-        fields = ['name', 'description', "targetgroup", 'websitetype', 'budget','socialnetworkchose' , 'socialnetwork', 'deadline', 'files']
+        fields = ['name', 'description', "targetgroup", 'websitetype', 'budget', 'socialnetworkchose' , 'socialnetwork', 'deadline', 'files']
         placeholders = {
-            'name': 'Название заказа',
-            'description': 'Описание вашего проекта, что хотите видеть, какие функции хотите реализовать',
-            'targetgroup': 'Какая ваша целевая аудитория?',
-            'websitetype': 'Выберите тип сайта',
-            'budget': 'Бюджет (€)',
-            'socialnetworkchose': "Выберите тип связи",
-            'socialnetwork': "Контакт для связи ",
-            'deadline': 'Желаемый срок',
-            'files': 'Файлы',
+            'name': _('Order name'),
+            'description': _('Description of your project, what you want to see, what features you want to implement'),
+            'targetgroup': _('Who is your target audience?'),
+            'websitetype': _('Select website type'),
+            'budget': _('Budget (€)'),
+            'socialnetworkchose': _("Select communication type"),
+            'socialnetwork': _("Phone number"),
+            'deadline': _('Desired deadline'),
+            'files': _('Files'),
         }
 
     def __init__(self, *args, **kwargs):

@@ -1,5 +1,6 @@
 {% extends "main/base.html" %}
 {% load static %}
+{% load i18n %}
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- jQuery (необходим для Bootstrap JavaScript плагинов) -->
@@ -8,7 +9,7 @@
 <!-- Bootstrap JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-{% block title %}Заказать{% endblock title %}
+{% block title %}{% trans "To Order" %}{% endblock title %}
 
 {% block main %}
 <section class="order animate__animated animate__delay-1s animate__fadeInUp animate__fadeIn">
@@ -16,7 +17,7 @@
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
 
-                <div class="order__title">Оформите Заказ:</div>
+                <div class="order__title">{% trans "Place an Order:" %}</div>
 
                 <div class="order__form">
                     <div class="form__name">
@@ -32,12 +33,12 @@
                     <div class="desk">
                         {{ form.description }}
                         <div class="desc__tooltip">
-                            <img src="{% static "img/futtage/tooltip.png" %}" alt="Tooltip" style="height: 20px; width: 20px;">
+                            <img src="{% static "img/futtage/tooltip.png" %}" alt="{% trans "Tooltip" %}" style="height: 20px; width: 20px;">
                             <div class="tooltip-text" style="display: none;">
-                                <p>Вы можете форматировать текст описания следующим образом:</p>
-                                <p>- Для <strong>жирного</strong> текста используйте <strong>**слово**</strong></p>
-                                <p>- Для <u>подчеркнутого</u> текста используйте <strong>__слово__</strong></p>
-                                <p>- Для <em>курсива</em> используйте <strong>&amp;слово&amp;</strong></p>
+                                <p>{% trans "You can format the description text as follows:" %}</p>
+                                <p>- {% trans "For" %} <strong>{% trans "bold" %}</strong> {% trans "text, use" %} <strong>**{% trans "word" %}**</strong></p>
+                                <p>- {% trans "For" %} <u>{% trans "underlined" %}</u> {% trans "text, use" %} <strong>__{% trans "word" %}__</strong></p>
+                                <p>- {% trans "For" %} <em>{% trans "italic" %}</em> {% trans "text, use" %} <strong>&amp;{% trans "word" %}&amp;</strong></p>
                             </div>
                         </div>
                     </div>
@@ -93,14 +94,14 @@
                         {% for file in form.files %}
                             {{ file }}
                         {% endfor %}  
-                        <span>Выберите файл </span>
+                        <span>{% trans "Select file " %}</span>
                     </label>
                     <div class="desc__tooltip">
-                        <img src="{% static "img/futtage/tooltip.png" %}" alt="Tooltip" style="height: 20px; width: 20px;">
+                        <img src="{% static "img/futtage/tooltip.png" %}" alt="{% trans "Tooltip" %}" style="height: 20px; width: 20px;">
                         <div class="tooltip-text tooltip-text-file" style="display: none;">
-                            <p>Вы можете добавить сюда архив с файлами для проекта - максимум 50мб</p>
-                            <p>Например:</p>
-                            <p>Фотографии дизайна, макеты, pdf-файлы и др.</p>
+                            <p>{% trans "You can add an archive with project files here - maximum 50MB:" %}</p>
+                            <p>{% trans "For example:" %}</p>
+                            <p>{% trans "Design photos, layouts, PDF files, etc." %}</p>
                         </div>
                     </div>
                     <div class="form__errors">
@@ -115,7 +116,7 @@
             </div>
             <div class="order__button">
                 <div class="button-submit-order">
-                    <button type="submit">Заказать</button>
+                    <button type="submit">{% trans "To Order" %}</button>
                 </div>
 
             </div>

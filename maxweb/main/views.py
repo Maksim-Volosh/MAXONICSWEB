@@ -1,13 +1,14 @@
 from django.http import Http404
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login, authenticate, logout
-from django.urls import reverse_lazy
-from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.conf import settings
 from django.template.defaultfilters import capfirst
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login as auth_login
+from django.utils.translation import gettext_lazy as _
+from django.contrib.auth.decorators import login_required
+
 import os
 import re
 
@@ -16,12 +17,15 @@ from .telegrambot import send_telegram_message
 from .models import CustomUser, OrderCreate
 from .forms import CustomUserCreationForm, LoginUserForm, OrderForm
 
+def is_reg(request):
+    if not request.user.is_authenticated:
+        request.session['desired_url'] = request.get_full_path()
+        return redirect('login')
+    return None
+    
 
 def index(request):
     return render(request, 'main/index.html')
-
-
-
 
 def register(request):
     if request.method == 'POST':
@@ -49,7 +53,6 @@ class LoginUser(LoginView):
 
     def form_valid(self, form):
         auth_login(self.request, form.get_user())
-        # После успешной аутентификации перенаправляем пользователя на изначальный URL
         desired_url = self.request.session.pop('desired_url', None)
         if desired_url:
             return redirect(desired_url)
@@ -63,14 +66,19 @@ def logout_view(request):
 
 
 def how_to_order(request):
+    redirect_response = is_reg(request)
+    if redirect_response:
+        return redirect_response
     if 'how_to_order_visited' in request.session:
         return redirect('create_order')
     else:
         request.session['how_to_order_visited'] = True
         return render(request, 'main/how_to_order.html')
 
-
 def create_order(request):
+    redirect_response = is_reg(request)
+    if redirect_response:
+        return redirect_response
     if 'how_to_order_visited' not in request.session:
         return redirect('how_to_order')
     if request.method == 'POST':
@@ -128,6 +136,9 @@ def delete_order(request, order_id):
 
 
 def profile_view(request, username):
+    redirect_response = is_reg(request)
+    if redirect_response:
+        return redirect_response
     user = get_object_or_404(CustomUser, username=username)
     if request.user.is_staff:
         orders = OrderCreate.objects.all()
@@ -151,3 +162,7 @@ def profile_view(request, username):
 
 def portfolio(request):
     return render(request, 'main/portfolio.html')
+
+
+def page_not_found(request, *args, **kwargs):
+    return render(request, 'main/404.html')

@@ -1,42 +1,43 @@
 {% extends "main/base.html" %}
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 
-{% block title %}Как совершить заказ{% endblock title %}
+{% block title %}{% trans "How to Place an Order" %}{% endblock title %}
 
 {% block main %}
 <section class="info">
     <div class="info_block">
         <div class="info__content">
-            <div class="content__title">Прежде чем заказать прочтите правила по оформлению заказа:</div>
+            <div class="content__title">{% trans "Before placing an order, please read the order processing rules:" %}</div>
             <div class="content__text">
-                <p>Название заказа:</p>
-                <p class="text__text"> • Укажите краткое название для заказа, которое четко отражает его суть.</p>
-                <p class="text__text"> • Избегайте использования общих и неопределенных названий.</p>
+                <p>{% trans "Order Name:" %}</p>
+                <p class="text__text">{% trans "• Provide a brief name for the order that clearly reflects its essence." %}</p>
+                <p class="text__text">{% trans "• Avoid using general and indefinite names." %}</p>
 
-                <p>Описание:</p>
-                <p class="text__text"> • Подробно опишите требования и ожидания к заказу.</p>
-                <p class="text__text"> • Укажите все особенности, которые должны быть реализованы в заказе.</p>
-                <p class="text__text"> • Предоставьте любые спецификации или предпочтения, если они есть.</p>
+                <p>{% trans "Description:" %}</p>
+                <p class="text__text">{% trans "• Thoroughly describe the requirements and expectations for the order." %}</p>
+                <p class="text__text">{% trans "• Specify all features that should be implemented in the order." %}</p>
+                <p class="text__text">{% trans "• Provide any specifications or preferences, if any." %}</p>
 
-                <p>Бюджет:</p>
-                <p class="text__text"> • Укажите реалистичный бюджет для выполнения заказа.</p>
-                <p class="text__text"> • Учитывайте все затраты, включая возможные дополнительные расходы.</p>
+                <p>{% trans "Budget:" %}</p>
+                <p class="text__text">{% trans "• Specify a realistic budget for completing the order." %}</p>
+                <p class="text__text">{% trans "• Take into account all expenses, including possible additional costs." %}</p>
 
-                <p>Желаемый срок:</p>
-                <p class="text__text"> • Выберите желаемый срок выполнения заказа из предложенных вариантов.</p>
-                <p class="text__text"> • Учитывайте срочность заказа и его сложность при выборе срока.</p>
+                <p>{% trans "Desired Deadline:" %}</p>
+                <p class="text__text">{% trans "• Select the desired deadline for completing the order from the options provided." %}</p>
+                <p class="text__text">{% trans "• Consider the urgency and complexity of the order when choosing the deadline." %}</p>
 
-                <p>Файлы:</p>
-                <p class="text__text"> • Желательно наличие прикрепленных файлов, которые могут помочь исполнителю лучше понять требования заказа.</p>
-                <p class="text__text"> • Вы можете добавить сюда архив с файлами для проекта Например: фотографии дизайна, макеты, pdf-файлы и др.</p>
-                <p class="text__text"> • Убедитесь, что прикрепленные файлы соответствуют требованиям заказа и могут быть легко восприняты.</p>
+                <p>{% trans "Files:" %}</p>
+                <p class="text__text">{% trans "• It is desirable to have attached files that can help the performer better understand the order requirements." %}</p>
+                <p class="text__text">{% trans "• You can add an archive with files for the project here. For example: design photos, layouts, PDF files, etc." %}</p>
+                <p class="text__text">{% trans "• Make sure that the attached files meet the order requirements and can be easily understood." %}</p>
             </div>
         </div>
         <div class="info__button">
             <div class="button__info">
-                <a class="info-submit" href="{% url "create_order" %}">Да все ясно, перейти к заказу</a>
+                <a class="info-submit" href="{% url "create_order" %}">{% trans "Yes, everything is clear, proceed to order" %}</a>
             </div>
         </div>
     </div>

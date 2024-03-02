@@ -1,9 +1,10 @@
 {% extends "main/base.html" %}
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 
-{% block title %}Регистрация{% endblock title %}
+{% block title %}{% trans "Register" %}{% endblock title %}
 
 {% block main %}
 <section class="register animate__animated animate__delay-1s animate__fadeInUp animate__fadeIn">
@@ -12,7 +13,7 @@
             {% csrf_token %}
             <div class="register__form">
 
-                <div class="register__title">Регистрация:</div>
+                <div class="register__title">{% trans "Register" %}:</div>
 
                 <div class="form__input">
                     {{ form.email }}
@@ -61,11 +62,11 @@
             </div>
             <div class="register__button">
                 <div class="button-submit">
-                    <button type="submit">Зарегестрироваться</button>
+                    <button type="submit">{% trans "Register" %}</button>
                 </div>
             </div>
             <div class="register__login">
-                <a href="{% url "login" %}"><p class="login-p">Уже есть аккаунт?</p></a>
+                <a href="{% url "login" %}"><p class="login-p">{% trans "Already have an account?" %}</p></a>
             </div>
         </form>
     </div>

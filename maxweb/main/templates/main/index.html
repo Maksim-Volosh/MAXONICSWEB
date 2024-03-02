@@ -1,5 +1,6 @@
 {% extends "main/base.html" %}
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,32 +74,33 @@
   </style>
 
   <section class="header18 cid-u1TQRbzxNu mbr-fullscreen bg-img">
-        <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="content-wrap col-12 col-md-8">
-              <h1
-                class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1 animate__animated animate__delay-1s animate__fadeInUp">
-                <strong >Добро пожаловать</strong>
-              </h1>
-              <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7 animate__animated animate__delay-1s animate__fadeInUp">
-                <p class="mbr-fonts-style mbr-text mbr-white display-7 animate__animated animate__delay-1s animate__fadeInUp">Добро пожаловать на MAXONICSWEB - ваш надежный партнер в создании превосходных веб-сайтов!</p>
+    <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="content-wrap col-12 col-md-8">
+          <h1
+            class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1 animate__animated animate__delay-1s animate__fadeInUp">
+            <strong>{% trans "Welcome" %}</strong>
+          </h1>
+          <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7 animate__animated animate__delay-1s animate__fadeInUp">
+            <p class="mbr-fonts-style mbr-text mbr-white display-7 animate__animated animate__delay-1s animate__fadeInUp">{% trans "Welcome to MAXONICSWEB - your reliable partner in creating outstanding websites!" %}</p>
 
-                <p class="mbr-fonts-style mbr-text mbr-white display-7 animate__animated animate__delay-1s animate__fadeInUp">Мы - команда профессионалов, готовых воплотить ваши идеи в жизнь с акцентом на качество, инновации и уникальность.</p>
+            <p class="mbr-fonts-style mbr-text mbr-white display-7 animate__animated animate__delay-1s animate__fadeInUp">{% trans "We are a team of professionals ready to bring your ideas to life with an emphasis on quality, innovation, and uniqueness." %}</p>
 
-                <p class="mbr-fonts-style mbr-text mbr-white display-7 animate__animated animate__delay-1s animate__fadeInUp"> Доверьте нам свой проект, и мы обеспечим вам высококачественное решение, соответствующее вашим потребностям и ожиданиям.</p></p>
-              <div class="buttons-seeother">
-                <div class="mbr-section-btn" id="seeother">
-                  <a class="btn btn-white-outline display-7 animate__animated animate__delay-1s animate__fadeInUp" href="{% url "home" %}#seeother">Узнать больше</a>
-                </div>
-                <div class="mbr-section-btn">
-                  <a class="btn btn-white-outline display-7 animate__animated animate__delay-1s animate__fadeInUp" href="{% url "create_order" %}">Заказать</a>
-                </div>
-              </div>
+            <p class="mbr-fonts-style mbr-text mbr-white display-7 animate__animated animate__delay-1s animate__fadeInUp">{% trans "Trust us with your project, and we will provide you with a high-quality solution that meets your needs and expectations." %}</p></p>
+          <div class="buttons-seeother">
+            <div class="mbr-section-btn" id="seeother">
+              <a class="btn btn-white-outline display-7 animate__animated animate__delay-1s animate__fadeInUp" href="{% url "home" %}#seeother">{% trans "Learn More" %}</a>
+            </div>
+            <div class="mbr-section-btn">
+              <a class="btn btn-white-outline display-7 animate__animated animate__delay-1s animate__fadeInUp" href="{% url "create_order" %}">{% trans "To Order" %}</a>
             </div>
           </div>
         </div>
-  </section>
+      </div>
+    </div>
+</section>
+
   <style>
     .cid-u1TQRbANKu {
       padding-top: 5rem;
@@ -117,21 +119,22 @@
   </style>
 
   <section class="article15 cid-u1TQRbANKu" id="about-me-15-u1TQRbANKu">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md">
-                    <h6 class="mbr-section-subtitle mbr-fonts-style mt-0 mb-4 display-5">
-                        <strong>Привет! Я - ваш личный веб-разработчик Максим, готовый воплотить ваши самые смелые идеи в реальность.</strong>
-                    </h6>
-                </div>
-                <div class="col-md-12 col-lg-6">
-                    <p class="mbr-text mbr-fonts-style display-7">С моим более чем 2.5-летним опытом веб-разработки я создаю уникальные дизайны, которые захватывают воображение и завоевывают сердца клиентов.</p>
-                    <p class="mbr-text mbr-fonts-style display-7">Моя страсть к разработки и дизайну позволяет мне предлагать вам непревзойденное качество и инновационные решения.</p>
-                    <p class="mbr-text mbr-fonts-style display-7">Доверьте нам свой проект, и вы убедитесь, что веб-разработка - это не просто работа, а искусство, которое я привношу в каждый проект благодаря своей страсти и дисциплине.</p>
-                </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md">
+                <h6 class="mbr-section-subtitle mbr-fonts-style mt-0 mb-4 display-5">
+                    <strong>{% trans "Hello! I'm your personal web developer Maxim, ready to bring your boldest ideas to life." %}</strong>
+                </h6>
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <p class="mbr-text mbr-fonts-style display-7">{% trans "With my over 2.5 years of experience in web development, I create unique designs that capture the imagination and win the hearts of clients." %}</p>
+                <p class="mbr-text mbr-fonts-style display-7">{% trans "My passion for development and design allows me to offer you unparalleled quality and innovative solutions." %}</p>
+                <p class="mbr-text mbr-fonts-style display-7">{% trans "Trust your project to me, and you will see that web development is not just a job, but an art that I bring to each project through my passion and discipline." %}</p>
             </div>
         </div>
-  </section>
+    </div>
+</section>
+
 
   <style>
       .cid-u1TQRbAKeC {
@@ -199,30 +202,31 @@
   </style>
 
   <section class="article05 cid-u1TQRbAKeC" id="generic-text-5-u1TQRbAKeC">
-        <div class="container">
-          <div class="row justify-content-center align-items-center">
-            <div class="col-12">
-              <div class="card-wrapper">
-                <div class="row">
-                  <div class="col-12 col-md-12 col-lg-5 image-wrapper">
-                    <img class="w-100" src="{% static "assets/images/photo-1627634777217-c864268db30c.jpeg" %}">
-                  </div>
-                  <div class="col-12 col-lg col-md-12">
-                    <div class="text-wrapper align-left">
-                      <h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
-                        <strong>Мои услуги</strong>
-                      </h1>
-                      <p class="mbr-text mbr-fonts-style mb-3 display-7">Я предоставляю полный спектр услуг по веб-разработке, включая создание уникальных дизайнов и оптимизацию производительности.</p>
-                      <p class="mbr-text mbr-fonts-style mb-3 display-7">Моя команда и я готовы воплотить ваши идеи в реальность, используя передовые технологии и инновационные подходы.</p>
-                      <p class="mbr-text mbr-fonts-style display-7">С нами ваш веб-сайт станет не просто онлайн-присутствием, а настоящим произведением искусства, способным завоевать мир.</p>
-                    </div>
-                  </div>
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-12">
+          <div class="card-wrapper">
+            <div class="row">
+              <div class="col-12 col-md-12 col-lg-5 image-wrapper">
+                <img class="w-100" src="{% static "assets/images/photo-1627634777217-c864268db30c.jpeg" %}">
+              </div>
+              <div class="col-12 col-lg col-md-12">
+                <div class="text-wrapper align-left">
+                  <h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
+                    <strong>{% trans "My Services" %}</strong>
+                  </h1>
+                  <p class="mbr-text mbr-fonts-style mb-3 display-7">{% trans "I provide a full range of web development services, including creating unique designs and optimizing performance." %}</p>
+                  <p class="mbr-text mbr-fonts-style mb-3 display-7">{% trans "My team and I are ready to bring your ideas to life, using cutting-edge technologies and innovative approaches." %}</p>
+                  <p class="mbr-text mbr-fonts-style display-7">{% trans "With us, your website will become not just an online presence, but a true work of art capable of conquering the world." %}</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-  </section>
+      </div>
+    </div>
+</section>
+
 
   <style>
     .cid-u1TQRbAEKp {
@@ -287,23 +291,24 @@
             <div class="col-md-12 clmn">
               <div class="cntra col-12 col-lg-6 col-md">
                 <h6 class="cntr mbr-section-subtitle mbr-fonts-style mt-0 mb-4 display-5">
-                    <strong>Почему стоит выбрать меня для создания вашего веб-сайта?</strong>
+                    <strong>{% trans "Why choose me for creating your website?" %}</strong>
                 </h6>
               </div>
               <div class="obr">
                 <div class="obr2">
-                  <p class="mbr-text mbr-fonts-style display-7">• Уникальный талант в веб-разработке, моя специализация в создании веб-сайтов обеспечивает уникальные и инновационные решения для вашего проекта. Я стремлюсь к тому, чтобы каждый веб-сайт был уникальным и отвечал вашим потребностям и целям!</p>
-                  <p class="mbr-text mbr-fonts-style display-7">• С более чем 2.5 годами опыта работы в области веб-разработки я уверенно владею всеми современными инструментами и технологиями. Мой опыт включает в себя работу с различными языками программирования и фреймворками!</p>
+                  <p class="mbr-text mbr-fonts-style display-7">{% trans "• Unique talent in web development, my specialization in creating websites ensures unique and innovative solutions for your project. I strive to make each website unique and tailored to your needs and goals!" %}</p>
+                  <p class="mbr-text mbr-fonts-style display-7">{% trans "• With over 2.5 years of experience in web development, I confidently master all modern tools and technologies. My experience includes working with various programming languages and frameworks!" %}</p>
                 </div>
                 <div class="obr2">
-                  <p class="mbr-text mbr-fonts-style display-7">• Я ценю ваше время и стремлюсь к максимально быстрому выполнению каждого проекта. Моя оптимизированная рабочая методология и эффективные процессы позволяют мне достигать высокой производительности без ущерба качеству!</p>
-                  <p class="mbr-text mbr-fonts-style display-7">• Я предлагаю конкурентоспособные и честные цены за мои услуги. Вместе с тем, я готов гибко подходить к вопросу ценообразования и находить решения, которые соответствуют вашему бюджету!</p>
+                  <p class="mbr-text mbr-fonts-style display-7">{% trans "• I value your time and aim for the fastest possible completion of each project. My optimized work methodology and efficient processes allow me to achieve high productivity without compromising quality!" %}</p>
+                  <p class="mbr-text mbr-fonts-style display-7">{% trans "• I offer competitive and fair prices for my services. At the same time, I am ready to flexibly approach pricing and find solutions that fit your budget!" %}</p>
                 </div>
               </div>
             </div>
         </div>
     </div>
-  </section>
+</section>
+
 
   <style>
     .cid-u1TQRbAwa2 {
@@ -346,88 +351,89 @@
   </style>
 
   <section class="list05 cid-u1TQRbAwa2" id="faq-3-u1TQRbAwa2">
-      <div class="container">
-          <div class="col-12 mb-5 content-head">
-              <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                  <strong>Часто задаваемые вопросы</strong>
-              </h3>
-          </div>
-          <div class="row justify-content-center">
-              <div class="col-12 col-lg-8">
+    <div class="container">
+        <div class="col-12 mb-5 content-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                <strong>{% trans "Frequently Asked Questions" %}</strong>
+            </h3>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
 
-                <div class="item-wrapper">
-                  <button class="accordion">
-                    <h5 class="justify-space-beetwen mbr-card-title mbr-fonts-style mt-0 display-5">
-                      <strong class="strel">Каковы ваши цены?</strong>
-                      <img src="{% static "img/futtage/arrow.svg" %}" alt="arrowdown" style="width: 34px; height:34px;">
-                    </h5>
-                  </button>
-                  <div class="panel">
-                    <div class="acc-text">
-                      Мои цены зависят от сложности проекта, но я могу предположить цену по количеству работы и объему проекта.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="item-wrapper">
-                  <button class="accordion">
-                    <h5 class="justify-space-beetwen mbr-card-title mbr-fonts-style mt-0 display-5">
-                      <strong class="strel">Как долго занимает создание веб-сайта?</strong>
-                      <img src="{% static "img/futtage/arrow.svg" %}" alt="arrowdown" style="width: 34px; height:34px;">
-                    </h5>
-                  </button>
-                  <div class="panel">
-                    <div class="acc-text">
-                      Время создания веб-сайта зависит от его сложности и функциональности. Я всегда стремлюсь к быстрому и качественному выполнению проекта.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="item-wrapper">
-                  <button class="accordion">
-                    <h5 class="justify-space-beetwen mbr-card-title mbr-fonts-style mt-0 display-5">
-                      <strong class="strel">Какой опыт у вас в веб-разработке?</strong>
-                      <img src="{% static "img/futtage/arrow.svg" %}" alt="arrowdown" style="width: 34px; height:34px;">
-                    </h5>
-                  </button>
-                  <div class="panel">
-                    <div class="acc-text">
-                      У меня более 2.5 лет опыта в веб-разработке, в том числе создание уникальных дизайнов, оптимизацию производительности и разработку пользовательских интерфейсов.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="item-wrapper">
-                  <button class="accordion">
-                    <h5 class="justify-space-beetwen mbr-card-title mbr-fonts-style mt-0 display-5">
-                      <strong class="strel">Как связаться с вами?</strong>
-                      <img src="{% static "img/futtage/arrow.svg" %}" alt="arrowdown" style="width: 34px; height:34px;">
-                    </h5>
-                  </button>
-                  <div class="panel">
-                    <div class="acc-text">
-                      Вы можете связаться со мной через блок - "Контакты" по электронной почте, по телефону или по рабочему телеграмм аккаунту.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="item-wrapper">
-                  <button class="accordion">
-                    <h5 class="justify-space-beetwen mbr-card-title mbr-fonts-style mt-0 display-5">
-                      <strong class="strel">Какие технологии вы используете?</strong>
-                      <img src="{% static "img/futtage/arrow.svg" %}" alt="arrowdown" style="width: 34px; height:34px;">
-                    </h5>
-                  </button>
-                  <div class="panel">
-                    <div class="acc-text">
-                      Я работаю с передовыми технологиями, такими как HTML5, CSS3, JavaScript, Django, Bootstrap, Python, SQL.
-                    </div>
+              <div class="item-wrapper">
+                <button class="accordion">
+                  <h5 class="justify-space-beetwen mbr-card-title mbr-fonts-style mt-0 display-5">
+                    <strong class="strel">{% trans "What are your prices?" %}</strong>
+                    <img src="{% static "img/futtage/arrow.svg" %}" alt="arrowdown" style="width: 34px; height:34px;">
+                  </h5>
+                </button>
+                <div class="panel">
+                  <div class="acc-text">
+                    {% trans "My prices depend on the complexity of the project, but I can estimate the price based on the amount of work and the scope of the project." %}
                   </div>
                 </div>
               </div>
-          </div>
-      </div>
-  </section>
+
+              <div class="item-wrapper">
+                <button class="accordion">
+                  <h5 class="justify-space-beetwen mbr-card-title mbr-fonts-style mt-0 display-5">
+                    <strong class="strel">{% trans "How long does it take to create a website?" %}</strong>
+                    <img src="{% static "img/futtage/arrow.svg" %}" alt="arrowdown" style="width: 34px; height:34px;">
+                  </h5>
+                </button>
+                <div class="panel">
+                  <div class="acc-text">
+                    {% trans "The time to create a website depends on its complexity and functionality. I always strive for fast and quality project completion." %}
+                  </div>
+                </div>
+              </div>
+
+              <div class="item-wrapper">
+                <button class="accordion">
+                  <h5 class="justify-space-beetwen mbr-card-title mbr-fonts-style mt-0 display-5">
+                    <strong class="strel">{% trans "What experience do you have in web development?" %}</strong>
+                    <img src="{% static "img/futtage/arrow.svg" %}" alt="arrowdown" style="width: 34px; height:34px;">
+                  </h5>
+                </button>
+                <div class="panel">
+                  <div class="acc-text">
+                    {% trans "I have over 2.5 years of experience in web development, including creating unique designs, optimizing performance, and developing user interfaces." %}
+                  </div>
+                </div>
+              </div>
+
+              <div class="item-wrapper">
+                <button class="accordion">
+                  <h5 class="justify-space-beetwen mbr-card-title mbr-fonts-style mt-0 display-5">
+                    <strong class="strel">{% trans "How can I contact you?" %}</strong>
+                    <img src="{% static "img/futtage/arrow.svg" %}" alt="arrowdown" style="width: 34px; height:34px;">
+                  </h5>
+                </button>
+                <div class="panel">
+                  <div class="acc-text">
+                    {% trans "You can contact me through the 'Contacts' block by email, phone, or through my work telegram account." %}
+                  </div>
+                </div>
+              </div>
+
+              <div class="item-wrapper">
+                <button class="accordion">
+                  <h5 class="justify-space-beetwen mbr-card-title mbr-fonts-style mt-0 display-5">
+                    <strong class="strel">{% trans "What technologies do you use?" %}</strong>
+                    <img src="{% static "img/futtage/arrow.svg" %}" alt="arrowdown" style="width: 34px; height:34px;">
+                  </h5>
+                </button>
+                <div class="panel">
+                  <div class="acc-text">
+                    {% trans "I work with cutting-edge technologies such as HTML5, CSS3, JavaScript, Django, Bootstrap, Python, SQL." %}
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 
 
@@ -518,10 +524,10 @@
                             </div>
                         </div>
                         <h4 class="card-title mbr-fonts-style mb-0 display-7">
-                            <strong>Уникальный дизайн</strong>
+                            <strong>{% trans "Unique Design" %}</strong>
                         </h4>
                         <h5 class="card-text mbr-fonts-style mt-2 display-7">
-                            Индивидуальный и захватывающий внешний вид вашего сайта.
+                            {% trans "Individual and captivating appearance of your website." %}
                         </h5>
                     </div>
                 </div>
@@ -535,10 +541,10 @@
                             </div>
                         </div>
                         <h4 class="card-title mbr-fonts-style mb-0 display-7">
-                            <strong>Высокая производительность</strong>
+                            <strong>{% trans "High Performance" %}</strong>
                         </h4>
                         <h5 class="card-text mbr-fonts-style mt-2 display-7">
-                            Оптимизация для быстрой загрузки и отзывчивости.
+                            {% trans "Optimized for fast loading and responsiveness." %}
                         </h5>
                     </div>
                 </div>
@@ -552,10 +558,10 @@
                             </div>
                         </div>
                         <h4 class="card-title mbr-fonts-style mb-0 display-7">
-                            <strong>Персонализированная поддержка</strong>
+                            <strong>{% trans "Personalized Support" %}</strong>
                         </h4>
                         <h5 class="card-text mbr-fonts-style mt-2 display-7">
-                            Индивидуальный подход и помощь на каждом этапе проекта.
+                            {% trans "Individual approach and assistance at every stage of the project." %}
                         </h5>
                     </div>
                 </div>
@@ -569,10 +575,10 @@
                             </div>
                         </div>
                         <h4 class="card-title mbr-fonts-style mb-0 display-7">
-                            <strong>Инновационные технологии</strong>
+                            <strong>{% trans "Innovative Technologies" %}</strong>
                         </h4>
                         <h5 class="card-text mbr-fonts-style mt-2 display-7">
-                            Использование передовых инструментов и технологий для вашего сайта.
+                            {% trans "Utilization of cutting-edge tools and technologies for your website." %}
                         </h5>
                     </div>
                 </div>
@@ -586,10 +592,10 @@
                             </div>
                         </div>
                         <h4 class="card-title mbr-fonts-style mb-0 display-7">
-                            <strong>Гибкие тарифы</strong>
+                            <strong>{% trans "Flexible Rates" %}</strong>
                         </h4>
                         <h5 class="card-text mbr-fonts-style mt-2 display-7">
-                            Разнообразные планы и гибкая система ценообразования.
+                            {% trans "Various plans and flexible pricing system." %}
                         </h5>
                     </div>
                 </div>
@@ -603,10 +609,10 @@
                             </div>
                         </div>
                         <h4 class="card-title mbr-fonts-style mb-0 display-7">
-                            <strong>Быстрое выполнение</strong>
+                            <strong>{% trans "Fast Execution" %}</strong>
                         </h4>
                         <h5 class="card-text mbr-fonts-style mt-2 display-7">
-                            Стремительное создание и запуск вашего веб-проекта.
+                            {% trans "Swift creation and launch of your web project." %}
                         </h5>
                     </div>
                 </div>
@@ -663,19 +669,20 @@
         <div class="row">
             <div class="col-12 col-md-8">
                 <h1 class="mbr-section-title mbr-fonts-style mb-4 display-1">
-                    <strong>Готовы начать?</strong>
+                    <strong>{% trans "Ready to start?" %}</strong>
                 </h1>
                 <p class="mbr-fonts-style mbr-text mb-4 display-7">
-                    Доверьте создание вашего веб-сайта профессионалу и увидите результаты, о которых мечтали!
+                    {% trans "Entrust the creation of your website to a professional and see the results you've been dreaming of!" %}
                 </p>
                 <div class="mbr-section-btn">
                     <a class="btn btn-primary display-7" href="{% url "how_to_order" %}" id="contacts">
-                        Заказать
+                        {% trans "To Order" %}
                     </a>
             </div>
         </div>
     </div>
   </section>
+
 
   <style>
     .cid-u1TQRbEvjR {
@@ -744,30 +751,35 @@
   </style>
 
   <section class="contacts03 cid-u1TQRbEvjR" id="contacts-11-u1TQRbEvjR">
-      <div class="container">
+    <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-4">
-            <div class="col-12 col-md-12">
-              <h5 class="mbr-section-title mbr-fonts-style mt-0 mb-4 display-2">
-                <strong>Контакты</strong>
-              </h5>
-              <p class="mbr-section-subtitle mbr-fonts-style mt-0 mb-4 display-7">
-                Телефон: <a href="#">+37061167250</a>
-                <br>Telegram: <a href="https://t.me/maksim_veb">@maksim_veb</a>
-                <br>Facebook: <a href="https://www.facebook.com/profile.php?id=61550255357390">Максим Волош</a>
-                <br>Email: maksgoza16@gmail.com
-                <br>Адрес:  Lithuania
-                <br>График работы: <br> Пн-Пт: <br> • 12:00 - 21:00  <br> Сб-Вс: <br> • 9:00 - 23:00</p>
+            <div class="col-lg-4">
+                <div class="col-12 col-md-12">
+                    <h5 class="mbr-section-title mbr-fonts-style mt-0 mb-4 display-2">
+                        <strong>{% trans "Contacts" %}</strong>
+                    </h5>
+                    <p class="mbr-section-subtitle mbr-fonts-style mt-0 mb-4 display-7">
+                        {% trans "Phone:" %} <a href="#">+37061167250</a>
+                        <br>{% trans "Telegram:" %} <a href="https://t.me/maksim_veb">@maksim_veb</a>
+                        <br>{% trans "Facebook:" %} <a href="https://www.facebook.com/profile.php?id=61550255357390">{% trans "Maxim Volosh" %}</a>
+                        <br>{% trans "Email:" %} maksgoza16@gmail.com
+                        <br>{% trans "Address:" %} Lithuania
+                        <br>{% trans "Working hours:" %}
+                        <br>{% trans "Mon-Fri:" %}
+                        <br> • 12:00 - 21:00
+                        <br>{% trans "Sat-Sun:" %}
+                        <br> • 9:00 - 23:00</p>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-8 side-features">
-            <div class="google-map">
-              <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key&#x3D;AIzaSyCt1265A4qvZy9HKUeA8J15AOC4SrCyZe4&amp;q&#x3D;%20Lithuania" allowfullscreen=""></iframe>
+            <div class="col-lg-8 side-features">
+                <div class="google-map">
+                    <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key&#x3D;AIzaSyCt1265A4qvZy9HKUeA8J15AOC4SrCyZe4&amp;q&#x3D;%20Lithuania" allowfullscreen=""></iframe>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-  </section>
+    </div>
+</section>
+
 
   <script src="{% static "assets/smoothscroll/smooth-scroll.js" %}"></script>
       <script>

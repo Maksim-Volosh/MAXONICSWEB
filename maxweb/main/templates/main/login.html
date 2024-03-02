@@ -1,9 +1,10 @@
 {% extends "main/base.html" %}
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 
-{% block title %}Войти{% endblock title %}
+{% block title %}{% trans "Login" %}{% endblock title %}
 
 {% block main %}
 <section class="register animate__animated animate__delay-1s animate__fadeInUp animate__fadeIn">
@@ -12,7 +13,7 @@
             {% csrf_token %}
             <div class="register__form">
 
-                <div class="login__title">Авторизация:</div>
+                <div class="login__title">{% trans "Login" %}:</div>
 
                 <div class="form__input">
                     {{ form.username }}
@@ -30,11 +31,11 @@
             </div>
             <div class="register__button">
                 <div class="button-submit">
-                    <button type="submit">Войти</button>
+                    <button type="submit">{% trans "Login" %}</button>
                 </div>
             </div>
             <div class="register__login">
-                <a href="{% url "register" %}"><p class="login-p">Еще нет аккаунта?</p></a>
+                <a href="{% url "register" %}"><p class="login-p">{% trans "Don't have an account yet?" %}</p></a>
             </div>
         </form>
     </div>

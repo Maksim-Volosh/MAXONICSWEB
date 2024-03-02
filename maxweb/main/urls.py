@@ -16,7 +16,10 @@ urlpatterns = [
     path('download/<path:file_path>/', download_file, name='download_file'),
     path('order/delete/<int:order_id>/', delete_order, name='delete_order'),
     path('portfolio/', portfolio, name='portfolio'),
+    path('404/', page_not_found, name="404"),
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+

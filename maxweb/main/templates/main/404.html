@@ -1,0 +1,23 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% block title %}404{% endblock title %}
+
+{% block main %}
+<section class="notfound-404">
+    <div class="notfound-404-message">
+        <div class="message-content">
+            <div class="content-title">
+                404 {% trans "Page not found" %}
+            </div>
+            <div class="content-text">
+                <p>{% trans "This page cannot be found, you can go to the " %}<a href="{% url "home" %}">{% trans "main page" %}</a></p> 
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock main %}
+</html>

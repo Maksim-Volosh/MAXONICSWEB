@@ -1,0 +1,818 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-02 23:50+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\main\forms.py:11 .\main\forms.py:42
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: .\main\forms.py:12
+msgid "First name"
+msgstr "Имя"
+
+#: .\main\forms.py:13
+msgid "Last name"
+msgstr "Фамилия"
+
+#: .\main\forms.py:14
+msgid "Email"
+msgstr "Электронная почта"
+
+#: .\main\forms.py:15
+msgid "Enter your password"
+msgstr "Введите пароль"
+
+#: .\main\forms.py:16
+msgid "Enter your password again"
+msgstr "Введите пароль еще раз"
+
+#: .\main\forms.py:25
+msgid "Password must contain only Latin letters and digits"
+msgstr "Пароль должен содержать только латинские буквы и цифры"
+
+#: .\main\forms.py:43
+msgid "Password"
+msgstr "Пароль"
+
+#: .\main\forms.py:58 .\main\models.py:14
+msgid "Order name"
+msgstr "Название заказа:"
+
+#: .\main\forms.py:59
+msgid ""
+"Description of your project, what you want to see, what features you want to "
+"implement"
+msgstr ""
+"Описание вашего проекта, что хотите видеть, какие функции хотите реализовать"
+
+#: .\main\forms.py:60
+msgid "Who is your target audience?"
+msgstr "Целевая аудитория:"
+
+#: .\main\forms.py:61 .\main\models.py:18 .\main\models.py:28
+msgid "Select website type"
+msgstr "Выберите тип сайта"
+
+#: .\main\forms.py:62
+msgid "Budget (€)"
+msgstr "Бюджет:"
+
+#: .\main\forms.py:63 .\main\models.py:39
+msgid "Select communication type"
+msgstr "Выберите тип связи"
+
+#: .\main\forms.py:64 .\main\models.py:48
+msgid "Contact for communication"
+msgstr "Контакт для связи"
+
+#: .\main\forms.py:65
+msgid "Desired deadline"
+msgstr "Желаемый срок"
+
+#: .\main\forms.py:66 .\main\models.py:64
+msgid "Files"
+msgstr "Файлы"
+
+#: .\main\models.py:15
+msgid "Description"
+msgstr "Описание"
+
+#: .\main\models.py:16
+msgid "Target audience"
+msgstr "Целевая аудитория"
+
+#: .\main\models.py:19
+msgid "Online store"
+msgstr "Интернет-магазин"
+
+#: .\main\models.py:20
+msgid "Personal website"
+msgstr "Персональный сайт"
+
+#: .\main\models.py:21
+msgid "Business card website"
+msgstr "Сайт-визитка"
+
+#: .\main\models.py:22
+msgid "Forum"
+msgstr "Форум"
+
+#: .\main\models.py:23
+msgid "Blog"
+msgstr "Блог"
+
+#: .\main\models.py:24
+msgid "Landing page"
+msgstr "Лендинг"
+
+#: .\main\models.py:25
+msgid "Other"
+msgstr "Другой"
+
+#: .\main\models.py:29
+msgid "Disired budget"
+msgstr "Желаемый срок"
+
+#: .\main\models.py:31
+msgid "Select desired deadline"
+msgstr "Выберите желаемый срок"
+
+#: .\main\models.py:32
+msgid "30 Days"
+msgstr "30 Дней"
+
+#: .\main\models.py:33
+msgid "45 Days"
+msgstr "45 Дней"
+
+#: .\main\models.py:34
+msgid "60 Days"
+msgstr "60 Дней"
+
+#: .\main\models.py:35
+msgid "75 Days"
+msgstr "75 Дней"
+
+#: .\main\models.py:43
+msgid "Phone number"
+msgstr "Номер телефона"
+
+#: .\main\models.py:44
+msgid "Custom"
+msgstr "Свой вариант"
+
+#: .\main\models.py:47
+msgid "Communication type"
+msgstr "Выберите тип связи"
+
+#: .\main\models.py:49
+msgid "Disired deadline"
+msgstr "Желаемый срок"
+
+#: .\main\models.py:52
+msgid "Under consideration"
+msgstr "На рассмотрении"
+
+#: .\main\models.py:53
+msgid "In progress"
+msgstr "В процессе"
+
+#: .\main\models.py:54
+msgid "Completed"
+msgstr "Завершено"
+
+#: .\main\models.py:57
+msgid "Status"
+msgstr "Статус"
+
+#: .\main\models.py:62
+msgid "The maximum file size is 50 MB."
+msgstr "Максимальный размер файла 50МБ."
+
+#: .\main\models.py:70
+msgid "Order"
+msgstr "Заказ"
+
+#: .\main\models.py:71
+msgid "Orders"
+msgstr "Заказы"
+
+#: .\main\templates\main\404.html:14
+msgid "Page not found"
+msgstr "Страница не найдена"
+
+#: .\main\templates\main\404.html:17
+msgid "This page cannot be found, you can go to the "
+msgstr "Эта страница не может быть найдена, вы можете перейти на "
+
+#: .\main\templates\main\404.html:17
+msgid "main page"
+msgstr "главную страницу"
+
+#: .\main\templates\main\base.html:612
+msgid "MAXONICSWEB"
+msgstr "MAXONICSWEB"
+
+#: .\main\templates\main\base.html:639 .\main\templates\main\base.html:750
+msgid "Home"
+msgstr "Главная"
+
+#: .\main\templates\main\base.html:643 .\main\templates\main\base.html:753
+msgid "Portfolio"
+msgstr "Портфолио"
+
+#: .\main\templates\main\base.html:646 .\main\templates\main\index.html:759
+msgid "Contacts"
+msgstr "Контакты"
+
+#: .\main\templates\main\base.html:649
+msgid "To order"
+msgstr "Заказать"
+
+#: .\main\templates\main\base.html:656
+msgid "Logout"
+msgstr "Выйти"
+
+#: .\main\templates\main\base.html:660 .\main\templates\main\register.html:7
+#: .\main\templates\main\register.html:16
+#: .\main\templates\main\register.html:65
+msgid "Register"
+msgstr "Регистрация"
+
+#: .\main\templates\main\base.html:756
+msgid "About us"
+msgstr "Контакты"
+
+#: .\main\templates\main\base.html:762
+msgid "© 2024 MAXONICSWEB."
+msgstr "© 2024 MAXONICSWEB."
+
+#: .\main\templates\main\create_order.html:12
+#: .\main\templates\main\create_order.html:119
+#: .\main\templates\main\index.html:96 .\main\templates\main\index.html:679
+msgid "To Order"
+msgstr "Заказать"
+
+#: .\main\templates\main\create_order.html:20
+msgid "Place an Order:"
+msgstr "Оформите Заказ"
+
+#: .\main\templates\main\create_order.html:36
+#: .\main\templates\main\create_order.html:100
+msgid "Tooltip"
+msgstr "Подсказка"
+
+#: .\main\templates\main\create_order.html:38
+msgid "You can format the description text as follows:"
+msgstr "Вы можете форматировать текст описания следующим образом:"
+
+#: .\main\templates\main\create_order.html:39
+#: .\main\templates\main\create_order.html:40
+#: .\main\templates\main\create_order.html:41
+msgid "For"
+msgstr "Для"
+
+#: .\main\templates\main\create_order.html:39
+msgid "bold"
+msgstr "жирного"
+
+#: .\main\templates\main\create_order.html:39
+#: .\main\templates\main\create_order.html:40
+#: .\main\templates\main\create_order.html:41
+msgid "text, use"
+msgstr "текста, используйте"
+
+#: .\main\templates\main\create_order.html:39
+#: .\main\templates\main\create_order.html:40
+#: .\main\templates\main\create_order.html:41
+msgid "word"
+msgstr "слово"
+
+#: .\main\templates\main\create_order.html:40
+msgid "underlined"
+msgstr "подчеркнутого"
+
+#: .\main\templates\main\create_order.html:41
+msgid "italic"
+msgstr "курсива"
+
+#: .\main\templates\main\create_order.html:97
+msgid "Select file "
+msgstr "Выберите файл "
+
+#: .\main\templates\main\create_order.html:102
+msgid "You can add an archive with project files here - maximum 50MB:"
+msgstr "Вы можете добавить сюда архив с файлами для проекта - максимум 50мб"
+
+#: .\main\templates\main\create_order.html:103
+msgid "For example:"
+msgstr "Например:"
+
+#: .\main\templates\main\create_order.html:104
+msgid "Design photos, layouts, PDF files, etc."
+msgstr "Фотографии дизайна, макеты, pdf-файлы и др."
+
+#: .\main\templates\main\how_to_order.html:7
+msgid "How to Place an Order"
+msgstr "Как совершить заказ"
+
+#: .\main\templates\main\how_to_order.html:13
+msgid "Before placing an order, please read the order processing rules:"
+msgstr "Прежде чем заказать прочтите правила по оформлению заказа:"
+
+#: .\main\templates\main\how_to_order.html:15
+msgid "Order Name:"
+msgstr "Название заказа:"
+
+#: .\main\templates\main\how_to_order.html:16
+msgid "• Provide a brief name for the order that clearly reflects its essence."
+msgstr ""
+"• Укажите краткое название для заказа, которое четко отражает его суть."
+
+#: .\main\templates\main\how_to_order.html:17
+msgid "• Avoid using general and indefinite names."
+msgstr "• Избегайте использования общих и неопределенных названий."
+
+#: .\main\templates\main\how_to_order.html:19
+#: .\main\templates\main\profile.html:64
+msgid "Description:"
+msgstr "Описание:"
+
+#: .\main\templates\main\how_to_order.html:20
+msgid "• Thoroughly describe the requirements and expectations for the order."
+msgstr "• Подробно опишите требования и ожидания к заказу."
+
+#: .\main\templates\main\how_to_order.html:21
+msgid "• Specify all features that should be implemented in the order."
+msgstr "• Укажите все особенности, которые должны быть реализованы в заказе."
+
+#: .\main\templates\main\how_to_order.html:22
+msgid "• Provide any specifications or preferences, if any."
+msgstr "• Предоставьте любые спецификации или предпочтения, если они есть."
+
+#: .\main\templates\main\how_to_order.html:24
+#: .\main\templates\main\profile.html:76
+msgid "Budget:"
+msgstr "Бюджет:"
+
+#: .\main\templates\main\how_to_order.html:25
+msgid "• Specify a realistic budget for completing the order."
+msgstr "• Укажите реалистичный бюджет для выполнения заказа."
+
+#: .\main\templates\main\how_to_order.html:26
+msgid "• Take into account all expenses, including possible additional costs."
+msgstr "• Учитывайте все затраты, включая возможные дополнительные расходы."
+
+#: .\main\templates\main\how_to_order.html:28
+msgid "Desired Deadline:"
+msgstr "Желаемый срок:"
+
+#: .\main\templates\main\how_to_order.html:29
+msgid ""
+"• Select the desired deadline for completing the order from the options "
+"provided."
+msgstr "• Выберите желаемый срок выполнения заказа из предложенных вариантов."
+
+#: .\main\templates\main\how_to_order.html:30
+msgid ""
+"• Consider the urgency and complexity of the order when choosing the "
+"deadline."
+msgstr "• Учитывайте срочность заказа и его сложность при выборе срока."
+
+#: .\main\templates\main\how_to_order.html:32
+#: .\main\templates\main\profile.html:88
+msgid "Files:"
+msgstr "Файлы:"
+
+#: .\main\templates\main\how_to_order.html:33
+msgid ""
+"• It is desirable to have attached files that can help the performer better "
+"understand the order requirements."
+msgstr ""
+"• Желательно наличие прикрепленных файлов, которые могут помочь исполнителю "
+"лучше понять требования заказа."
+
+#: .\main\templates\main\how_to_order.html:34
+msgid ""
+"• You can add an archive with files for the project here. For example: "
+"design photos, layouts, PDF files, etc."
+msgstr ""
+"• Вы можете добавить сюда архив с файлами для проекта Например: фотографии "
+"дизайна, макеты, pdf-файлы и др."
+
+#: .\main\templates\main\how_to_order.html:35
+msgid ""
+"• Make sure that the attached files meet the order requirements and can be "
+"easily understood."
+msgstr ""
+"• Убедитесь, что прикрепленные файлы соответствуют требованиям заказа и "
+"могут быть легко восприняты."
+
+#: .\main\templates\main\how_to_order.html:40
+msgid "Yes, everything is clear, proceed to order"
+msgstr "Да все ясно, перейти к заказу"
+
+#: .\main\templates\main\index.html:83
+msgid "Welcome"
+msgstr "Добро пожаловать"
+
+#: .\main\templates\main\index.html:86
+msgid ""
+"Welcome to MAXONICSWEB - your reliable partner in creating outstanding "
+"websites!"
+msgstr ""
+"Добро пожаловать на MAXONICSWEB - ваш надежный партнер в создании "
+"превосходных веб-сайтов!"
+
+#: .\main\templates\main\index.html:88
+msgid ""
+"We are a team of professionals ready to bring your ideas to life with an "
+"emphasis on quality, innovation, and uniqueness."
+msgstr ""
+"Мы - команда профессионалов, готовых воплотить ваши идеи в жизнь с акцентом "
+"на качество, инновации и уникальность."
+
+#: .\main\templates\main\index.html:90
+msgid ""
+"Trust us with your project, and we will provide you with a high-quality "
+"solution that meets your needs and expectations."
+msgstr ""
+"Доверьте нам свой проект, и мы обеспечим вам высококачественное решение, "
+"соответствующее вашим потребностям и ожиданиям."
+
+#: .\main\templates\main\index.html:93
+msgid "Learn More"
+msgstr "Узнать больше"
+
+#: .\main\templates\main\index.html:126
+msgid ""
+"Hello! I'm your personal web developer Maxim, ready to bring your boldest "
+"ideas to life."
+msgstr ""
+"Привет! Я - ваш личный веб-разработчик Максим, готовый воплотить ваши самые "
+"смелые идеи в реальность."
+
+#: .\main\templates\main\index.html:130
+msgid ""
+"With my over 2.5 years of experience in web development, I create unique "
+"designs that capture the imagination and win the hearts of clients."
+msgstr ""
+"С моим более чем 2.5-летним опытом веб-разработки я создаю уникальные "
+"дизайны, которые захватывают воображение и завоевывают сердца клиентов."
+
+#: .\main\templates\main\index.html:131
+msgid ""
+"My passion for development and design allows me to offer you unparalleled "
+"quality and innovative solutions."
+msgstr ""
+"Моя страсть к разработки и дизайну позволяет мне предлагать вам "
+"непревзойденное качество и инновационные решения."
+
+#: .\main\templates\main\index.html:132
+msgid ""
+"Trust your project to me, and you will see that web development is not just "
+"a job, but an art that I bring to each project through my passion and "
+"discipline."
+msgstr ""
+"Доверьте нам свой проект, и вы убедитесь, что веб-разработка - это не просто "
+"работа, а искусство, которое я привношу в каждый проект благодаря своей "
+"страсти и дисциплине."
+
+#: .\main\templates\main\index.html:216
+msgid "My Services"
+msgstr "Мои услуги"
+
+#: .\main\templates\main\index.html:218
+msgid ""
+"I provide a full range of web development services, including creating "
+"unique designs and optimizing performance."
+msgstr ""
+"Я предоставляю полный спектр услуг по веб-разработке, включая создание "
+"уникальных дизайнов и оптимизацию производительности."
+
+#: .\main\templates\main\index.html:219
+msgid ""
+"My team and I are ready to bring your ideas to life, using cutting-edge "
+"technologies and innovative approaches."
+msgstr ""
+"Моя команда и я готовы воплотить ваши идеи в реальность, используя передовые "
+"технологии и инновационные подходы."
+
+#: .\main\templates\main\index.html:220
+msgid ""
+"With us, your website will become not just an online presence, but a true "
+"work of art capable of conquering the world."
+msgstr ""
+"С нами ваш веб-сайт станет не просто онлайн-присутствием, а настоящим "
+"произведением искусства, способным завоевать мир."
+
+#: .\main\templates\main\index.html:294
+msgid "Why choose me for creating your website?"
+msgstr "Почему стоит выбрать меня для создания вашего веб-сайта?"
+
+#: .\main\templates\main\index.html:299
+msgid ""
+"• Unique talent in web development, my specialization in creating websites "
+"ensures unique and innovative solutions for your project. I strive to make "
+"each website unique and tailored to your needs and goals!"
+msgstr ""
+"• Уникальный талант в веб-разработке, моя специализация в создании веб-"
+"сайтов обеспечивает уникальные и инновационные решения для вашего проекта. Я "
+"стремлюсь к тому, чтобы каждый веб-сайт был уникальным и отвечал вашим "
+"потребностям и целям!"
+
+#: .\main\templates\main\index.html:300
+msgid ""
+"• With over 2.5 years of experience in web development, I confidently master "
+"all modern tools and technologies. My experience includes working with "
+"various programming languages and frameworks!"
+msgstr ""
+"• С более чем 2.5 годами опыта работы в области веб-разработки я уверенно "
+"владею всеми современными инструментами и технологиями. Мой опыт включает в "
+"себя работу с различными языками программирования и фреймворками!"
+
+#: .\main\templates\main\index.html:303
+msgid ""
+"• I value your time and aim for the fastest possible completion of each "
+"project. My optimized work methodology and efficient processes allow me to "
+"achieve high productivity without compromising quality!"
+msgstr ""
+"• Я ценю ваше время и стремлюсь к максимально быстрому выполнению каждого "
+"проекта. Моя оптимизированная рабочая методология и эффективные процессы "
+"позволяют мне достигать высокой производительности без ущерба качеству!"
+
+#: .\main\templates\main\index.html:304
+msgid ""
+"• I offer competitive and fair prices for my services. At the same time, I "
+"am ready to flexibly approach pricing and find solutions that fit your "
+"budget!"
+msgstr ""
+"• Я предлагаю конкурентоспособные и честные цены за мои услуги. Вместе с "
+"тем, я готов гибко подходить к вопросу ценообразования и находить решения, "
+"которые соответствуют вашему бюджету!"
+
+#: .\main\templates\main\index.html:357
+msgid "Frequently Asked Questions"
+msgstr "Часто задаваемые вопросы"
+
+#: .\main\templates\main\index.html:366
+msgid "What are your prices?"
+msgstr "Каковы ваши цены?"
+
+#: .\main\templates\main\index.html:372
+msgid ""
+"My prices depend on the complexity of the project, but I can estimate the "
+"price based on the amount of work and the scope of the project."
+msgstr ""
+"Мои цены зависят от сложности проекта, но я могу предположить цену по "
+"количеству работы и объему проекта."
+
+#: .\main\templates\main\index.html:380
+msgid "How long does it take to create a website?"
+msgstr "Как долго занимает создание веб-сайта?"
+
+#: .\main\templates\main\index.html:386
+msgid ""
+"The time to create a website depends on its complexity and functionality. I "
+"always strive for fast and quality project completion."
+msgstr ""
+"Время создания веб-сайта зависит от его сложности и функциональности. Я "
+"всегда стремлюсь к быстрому и качественному выполнению проекта."
+
+#: .\main\templates\main\index.html:394
+msgid "What experience do you have in web development?"
+msgstr "Какой опыт у вас в веб-разработке?"
+
+#: .\main\templates\main\index.html:400
+msgid ""
+"I have over 2.5 years of experience in web development, including creating "
+"unique designs, optimizing performance, and developing user interfaces."
+msgstr ""
+"Я предоставляю полный спектр услуг по веб-разработке, включая создание "
+"уникальных дизайнов и оптимизацию производительности."
+
+#: .\main\templates\main\index.html:408
+msgid "How can I contact you?"
+msgstr "Как связаться с вами?"
+
+#: .\main\templates\main\index.html:414
+msgid ""
+"You can contact me through the 'Contacts' block by email, phone, or through "
+"my work telegram account."
+msgstr ""
+"Вы можете связаться со мной через блок - 'Контакты' по электронной почте, по "
+"телефону или по рабочему телеграмм аккаунту."
+
+#: .\main\templates\main\index.html:422
+msgid "What technologies do you use?"
+msgstr "Какие технологии вы используете?"
+
+#: .\main\templates\main\index.html:428
+msgid ""
+"I work with cutting-edge technologies such as HTML5, CSS3, JavaScript, "
+"Django, Bootstrap, Python, SQL."
+msgstr ""
+"Я работаю с передовыми технологиями, такими как HTML5, CSS3, JavaScript, "
+"Django, Bootstrap, Python, SQL."
+
+#: .\main\templates\main\index.html:527
+msgid "Unique Design"
+msgstr "Уникальный дизайн"
+
+#: .\main\templates\main\index.html:530
+msgid "Individual and captivating appearance of your website."
+msgstr "Индивидуальный и захватывающий внешний вид вашего сайта."
+
+#: .\main\templates\main\index.html:544
+msgid "High Performance"
+msgstr "Высокая производительность"
+
+#: .\main\templates\main\index.html:547
+msgid "Optimized for fast loading and responsiveness."
+msgstr "Оптимизация для быстрой загрузки и отзывчивости."
+
+#: .\main\templates\main\index.html:561
+msgid "Personalized Support"
+msgstr "Персонализированная поддержка"
+
+#: .\main\templates\main\index.html:564
+msgid "Individual approach and assistance at every stage of the project."
+msgstr "Индивидуальный подход и помощь на каждом этапе проекта."
+
+#: .\main\templates\main\index.html:578
+msgid "Innovative Technologies"
+msgstr "Инновационные технологии"
+
+#: .\main\templates\main\index.html:581
+msgid "Utilization of cutting-edge tools and technologies for your website."
+msgstr "Использование передовых инструментов и технологий для вашего сайта."
+
+#: .\main\templates\main\index.html:595
+msgid "Flexible Rates"
+msgstr "Гибкие тарифы"
+
+#: .\main\templates\main\index.html:598
+msgid "Various plans and flexible pricing system."
+msgstr "Разнообразные планы и гибкая система ценообразования."
+
+#: .\main\templates\main\index.html:612
+msgid "Fast Execution"
+msgstr "Быстрое выполнение"
+
+#: .\main\templates\main\index.html:615
+msgid "Swift creation and launch of your web project."
+msgstr "Стремительное создание и запуск вашего веб-проекта."
+
+#: .\main\templates\main\index.html:672
+msgid "Ready to start?"
+msgstr "Готовы начать?"
+
+#: .\main\templates\main\index.html:675
+msgid ""
+"Entrust the creation of your website to a professional and see the results "
+"you've been dreaming of!"
+msgstr ""
+"Доверьте создание вашего веб-сайта профессионалу и увидите результаты, о "
+"которых мечтали!"
+
+#: .\main\templates\main\index.html:762
+msgid "Phone:"
+msgstr "Телефон:"
+
+#: .\main\templates\main\index.html:763
+msgid "Telegram:"
+msgstr "Telegram:"
+
+#: .\main\templates\main\index.html:764
+msgid "Facebook:"
+msgstr "Facebook:"
+
+#: .\main\templates\main\index.html:764
+msgid "Maxim Volosh"
+msgstr "Максим Волош"
+
+#: .\main\templates\main\index.html:765
+msgid "Email:"
+msgstr "Электронная почта:"
+
+#: .\main\templates\main\index.html:766
+msgid "Address:"
+msgstr "Адрес:"
+
+#: .\main\templates\main\index.html:767
+msgid "Working hours:"
+msgstr "График работы:"
+
+#: .\main\templates\main\index.html:768
+msgid "Mon-Fri:"
+msgstr "Пн-Пт:"
+
+#: .\main\templates\main\index.html:770
+msgid "Sat-Sun:"
+msgstr "Сб-Вс:"
+
+#: .\main\templates\main\login.html:7 .\main\templates\main\login.html:16
+#: .\main\templates\main\login.html:34
+msgid "Login"
+msgstr "Авторизация"
+
+#: .\main\templates\main\login.html:38
+msgid "Don't have an account yet?"
+msgstr "Еще нет аккаунта?"
+
+#: .\main\templates\main\profile.html:7
+msgid "Profile"
+msgstr "Мой профиль"
+
+#: .\main\templates\main\profile.html:15
+msgid "Admin panel"
+msgstr "Панель администратора"
+
+#: .\main\templates\main\profile.html:20
+msgid "My profile:"
+msgstr "Мой профиль:"
+
+#: .\main\templates\main\profile.html:23
+msgid "Username:"
+msgstr "Имя пользователя:"
+
+#: .\main\templates\main\profile.html:28
+msgid "Email address:"
+msgstr "Адрес электронной почты:"
+
+#: .\main\templates\main\profile.html:32
+msgid "First name:"
+msgstr "Имя:"
+
+#: .\main\templates\main\profile.html:36
+msgid "Last name:"
+msgstr "Фамилия:"
+
+#: .\main\templates\main\profile.html:45
+msgid "CONGRATULATIONS"
+msgstr "ПОЗДРАВЛЯЕМ"
+
+#: .\main\templates\main\profile.html:46
+msgid ""
+"Your order has been successfully created and will be processed as soon as "
+"possible. Please follow the order status"
+msgstr ""
+"Ваш заказ успешно создан, и будет обработан в скорейшее время, следите за "
+"статусом заказа"
+
+#: .\main\templates\main\profile.html:48
+msgid "Got it"
+msgstr "Понял"
+
+#: .\main\templates\main\profile.html:53
+msgid "Orders:"
+msgstr "Заказы:"
+
+#: .\main\templates\main\profile.html:60
+msgid "Order:"
+msgstr "Заказ:"
+
+#: .\main\templates\main\profile.html:68
+msgid "Target audience:"
+msgstr "Целевая аудитория:"
+
+#: .\main\templates\main\profile.html:72
+msgid "Website type:"
+msgstr "Тип сайта:"
+
+#: .\main\templates\main\profile.html:80
+msgid "Desired deadline:"
+msgstr "Желаемый срок:"
+
+#: .\main\templates\main\profile.html:84
+msgid "Contact type:"
+msgstr "Тип связи:"
+
+#: .\main\templates\main\profile.html:92
+msgid "Files not provided..."
+msgstr "Файлы не предоставлены..."
+
+#: .\main\templates\main\profile.html:96
+msgid "Status:"
+msgstr "Статус:"
+
+#: .\main\templates\main\profile.html:101
+msgid "User:"
+msgstr "Пользователь:"
+
+#: .\main\templates\main\profile.html:107
+msgid "Delete order"
+msgstr "Удалить заказ"
+
+#: .\main\templates\main\profile.html:117
+msgid "You don't have any orders 😢 ..."
+msgstr "У вас нету заказов 😢 ..."
+
+#: .\main\templates\main\profile.html:120
+msgid "Place an order"
+msgstr "Заказать"
+
+#: .\main\templates\main\register.html:69
+msgid "Already have an account?"
+msgstr "Уже есть аккаунт?"
+
+#~ msgid "Russian"
+#~ msgstr "Русский"
+
+#~ msgid "English"
+#~ msgstr "Английский"
+
+#~ msgid "Invalid language selection."
+#~ msgstr "Неверный выбор языка."

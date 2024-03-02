@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -599,63 +600,81 @@
       </style>
 
       <section class="menu menu2 cid-u1TQRbz2uR" once="menu" id="menu-5-u1TQRbz2uR">
-              <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
-                <div class="container">
-                  <div class="navbar-brand">
+        <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+            <div class="container">
+                <div class="navbar-brand">
                     <span class="navbar-logo">
-                                <a href="{% url "home" %}">
-                                    <img src="{% static "img/futtage/logo.jpg" %}" style="height: 4.3rem;">
-                                </a>
-                            </span>
-                            <span class="navbar-caption-wrap">
-                      <a class="navbar-caption text-black display-4" href="{% url "home" %}">MAXONICSWEB</a>
+                        <a href="{% url "home" %}">
+                            <img src="{% static "img/futtage/logo.jpg" %}" style="height: 4.3rem;">
+                        </a>
                     </span>
-                  </div>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    <span class="navbar-caption-wrap">
+                        <a class="navbar-caption text-black display-4" href="{% url "home" %}">{% trans "MAXONICSWEB" %}</a>
+                    </span>
+                </div>
+                <li class="nav-item nav-item-outside">
+                  {% if request.LANGUAGE_CODE != 'ru' %}
+                    <button class="nav-link link ns display-4" onclick="changeLanguage('ru')"><h6 class="podch">RU</h6></button>
+                    
+                  {% endif %}
+                  {% if request.LANGUAGE_CODE != 'en' %}
+                  <button class="nav-link link ns display-4" onclick="changeLanguage('en')"><h6 class="podch">EN</h6></button>
+                  {% endif %}
+                </li>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-bs-toggle="collapse" data-target="#navbarSupportedContent"
                     data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <div class="hamburger">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-                      <li class="nav-item">
-                        <a class="nav-link nav-link-podch link ns display-4" href="{% url "home" %}">Главная</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link nav-link-podch link ns display-4" href="{% url "portfolio" %}"
-                          aria-expanded="false">Портфолио</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link nav-link-podch link ns display-4" href="{% url "home" %}#contacts">Контакты</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link nav-link-podch link ns display-4" href="{% url "how_to_order" %}">Заказать</a>
-                      </li>
-
-                      {% if user.is_authenticated %}
-                          <li class="nav-item nav-item-mod">
-                            <a class="nav-link link display-4 profile-name" href="{% url 'profile' username=request.user %}"><h6 class="podch">{{ request.user|upper }}</h6></a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link link display-4" href="{% url "logout" %}">Выйти</a>
-                          </li>
-                      {% else %}
                         <li class="nav-item">
-                          <a class="nav-link link display-4" href="{% url "register" %}"><h6 class="podch">Регистрация</h6></a>
+                            <a class="nav-link nav-link-podch link ns display-4" href="{% url "home" %}">{% trans "Home" %}</a>
                         </li>
-                      {% endif %}
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-podch link ns display-4" href="{% url "portfolio" %}"
+                                aria-expanded="false">{% trans "Portfolio" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-podch link ns display-4" href="{% url "home" %}#contacts">{% trans "Contacts" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-podch link ns display-4" href="{% url "how_to_order" %}">{% trans "To order" %}</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item nav-item-mod">
+                            <a class="nav-link link display-4 profile-name" href="{% url 'profile' username=request.user %}"><h6 class="podch">{{ request.user|upper }}</h6></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link display-4" href="{% url "logout" %}">{% trans "Logout" %}</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link link display-4" href="{% url "register" %}"><h6 class="podch">{% trans "Register" %}</h6></a>
+                        </li>
+                        {% endif %}
+                        <li class="nav-item nav-item-inside">
+                          {% if request.LANGUAGE_CODE != 'ru' %}
+                            <button class="nav-link link ns display-4" onclick="changeLanguage('ru')"><h6 class="podch">RU</h6></button>
+                            
+                          {% endif %}
+                          {% if request.LANGUAGE_CODE != 'en' %}
+                          <button class="nav-link link ns display-4" onclick="changeLanguage('en')"><h6 class="podch">EN</h6></button>
+                          {% endif %}
+                        </li>
+    
                     </ul>
-                  </div>
                 </div>
-              </nav>
-      </section>
+            </div>
+        </nav>
+    </section>    
       <section class="main">
         {% block main %}
 
@@ -723,25 +742,30 @@
       </style>
 
       <section class="footer3 cid-u1TQRbEQmm" once="footers" id="footer-3-u1TQRbEQmm">
-              <div class="container">
-                  <div class="row">
-                      <div class="row-links">
-                          <ul class="header-menu">
-                          <li class="header-menu-item mbr-fonts-style display-5">
-                              <a href="{% url "home" %}" class="text-white">Главная</a>
-                            </li><li class="header-menu-item mbr-fonts-style display-5">
-                              <a href="#" class="text-white">Портфолио</a>
-                            </li><li class="header-menu-item mbr-fonts-style display-5">
-                              <a href="{% url "home" %}#about" class="text-white">О нас</a>
-                            </li></ul>
-                        </div>
-                      <div class="col-12 mt-5">
-                          <p class="mbr-fonts-style copyright display-7">
-                              © 2024 MAXONICSWEB.
-                      </div>
-                  </div>
-              </div>
-      </section>
+        <div class="container">
+            <div class="row">
+                <div class="row-links">
+                    <ul class="header-menu">
+                        <li class="header-menu-item mbr-fonts-style display-5">
+                            <a href="{% url "home" %}" class="text-white">{% trans "Home" %}</a>
+                        </li>
+                        <li class="header-menu-item mbr-fonts-style display-5">
+                            <a href="#" class="text-white">{% trans "Portfolio" %}</a>
+                        </li>
+                        <li class="header-menu-item mbr-fonts-style display-5">
+                            <a href="{% url "home" %}#about" class="text-white">{% trans "About us" %}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 mt-5">
+                    <p class="mbr-fonts-style copyright display-7">
+                        {% trans "© 2024 MAXONICSWEB." %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     </div>
 </body>
 
@@ -760,6 +784,10 @@
     document.body.append(animationInput);
   })();
 
+    function changeLanguage(lang) {
+        var newUrl = window.location.pathname.replace(/^\/[a-z]{2}\//, '/' + lang + '/');
+        window.location.href = newUrl;
+    }
 </script>
 
 <script src="{% static "js/js.js" %}"></script>
